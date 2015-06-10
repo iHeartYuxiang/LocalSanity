@@ -49,14 +49,14 @@ public static Collection<Object[]> data() {
 	Collection<Object[]> params = new ArrayList<>(100);
 
 	//params.add(new Object[] {  "http://www.z100.com"});
-    //  params.add(new Object[] {  "http://www.y100.com"});
-     // params.add(new Object[] {  "http://www.radio1057.com"});
+      params.add(new Object[] {  "http://www.y100.com"});
+      params.add(new Object[] {  "http://www.radio1057.com"});
     //params.add(new Object[] {  "http://m.933flz.com"});
     // params.add(new Object[] {  "http://www.933flz.com"});
    //  params.add(new Object[] {  "http://www.Z100.com"});
     
-     params.add(new Object[] {  "http://mike.iheartmedia.com"});
-     params.add(new Object[] {  "http://m.mike.iheartmedia.com"});
+    // params.add(new Object[] {  "http://mike.iheartmedia.com"});
+     //params.add(new Object[] {  "http://m.mike.iheartmedia.com"});
      
     return params;
 }
@@ -71,7 +71,7 @@ protected static DesiredCapabilities dCaps;
 	 Header header;	
 		
 	//String browser = "firefox";
-   String browser = "chrome";
+ //  String browser = "chrome";
 	
 	
 	
@@ -92,6 +92,8 @@ protected static DesiredCapabilities dCaps;
 		
 		// System.setProperty("phantomjs.binary.path", "C:\\Users\\1111128\\workspace\\lib\\phantomjs-2.0.0-windows\\bin\\phantomjs.exe");
 		dCaps = new DesiredCapabilities();
+		dCaps.setBrowserName("firefox");
+		dCaps.setVersion("38");
 		dCaps.setJavascriptEnabled(true);
 		dCaps.setCapability("takesScreenshot", true);
 		
@@ -108,7 +110,7 @@ protected static DesiredCapabilities dCaps;
 	}
 	
 	
-	/*
+	
 	 @Test
 	 public void test_AL_498_nowPlayingWidegt() throws Exception
 	 {   
@@ -222,9 +224,9 @@ protected static DesiredCapabilities dCaps;
 	 	}  	
 	 	System.out.println(name.getMethodName() + " is Done.");
 	 }
- */
+ 
 	
-	
+	/*
 	@Test
 	 public void testBadLinks() throws Exception
 	 {   
@@ -237,7 +239,7 @@ protected static DesiredCapabilities dCaps;
 	 	}  	
 	 	System.out.println(name.getMethodName() + " is Done.");
 	 }
-    
+    */
   
 	 @After
 	    public void tearDown() throws Exception{

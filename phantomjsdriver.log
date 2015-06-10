@@ -1159,3 +1159,532 @@ Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","d
 [INFO  - 2015-06-09T19:35:32.423Z] Session [b14250b0-0ede-11e5-8082-e16988239351] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
 [INFO  - 2015-06-09T19:35:32.423Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b14250b0-0ede-11e5-8082-e16988239351
 [INFO  - 2015-06-09T19:35:57.623Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:06:24.638Z] GhostDriver - Main - running on port 46097
+[INFO  - 2015-06-10T16:06:25.703Z] Session [a53f4a00-0f8a-11e5-9638-2d7f9cbfd758] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:06:25.703Z] Session [a53f4a00-0f8a-11e5-9638-2d7f9cbfd758] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:06:25.703Z] Session [a53f4a00-0f8a-11e5-9638-2d7f9cbfd758] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:06:25.703Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a53f4a00-0f8a-11e5-9638-2d7f9cbfd758
+[ERROR - 2015-06-10T16:06:32.056Z] Session [a53f4a00-0f8a-11e5-9638-2d7f9cbfd758] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:06:32.057Z] Session [a53f4a00-0f8a-11e5-9638-2d7f9cbfd758] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:11:24.634Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2015-06-10T16:16:24.665Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2015-06-10T16:21:24.703Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+8.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:07:03.944Z] Session [bc0a6710-0f8a-11e5-a877-bf18ce0d1e88] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:07:03.944Z] Session [bc0a6710-0f8a-11e5-a877-bf18ce0d1e88] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:07:03.944Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: bc0a6710-0f8a-11e5-a877-bf18ce0d1e88
+[ERROR - 2015-06-10T16:07:07.237Z] Session [bc0a6710-0f8a-11e5-a877-bf18ce0d1e88] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:07:07.237Z] Session [bc0a6710-0f8a-11e5-a877-bf18ce0d1e88] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:07:09.035Z] Session [bc0a6710-0f8a-11e5-a877-bf18ce0d1e88] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:07:09.036Z] Session [bc0a6710-0f8a-11e5-a877-bf18ce0d1e88] - page.onError - stack:
+  I (http://mike.iheartmedia.com/main.html:18)
+  h (http://mike.iheartmedia.com/main.html:8)
+[ERROR - 2015-06-10T16:07:10.170Z] Session [bc0a6710-0f8a-11e5-a877-bf18ce0d1e88] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:07:10.170Z] Session [bc0a6710-0f8a-11e5-a877-bf18ce0d1e88] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:07:39.176Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952459157
+[INFO  - 2015-06-10T16:07:40.433Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:07:42.614Z] GhostDriver - Main - running on port 42043
+[INFO  - 2015-06-10T16:07:43.035Z] Session [d35673f0-0f8a-11e5-9e81-43e65ad519a2] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:07:43.035Z] Session [d35673f0-0f8a-11e5-9e81-43e65ad519a2] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:07:43.035Z] Session [d35673f0-0f8a-11e5-9e81-43e65ad519a2] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:07:43.036Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d35673f0-0f8a-11e5-9e81-43e65ad519a2
+[ERROR - 2015-06-10T16:07:47.695Z] Session [d35673f0-0f8a-11e5-9e81-43e65ad519a2] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:07:47.696Z] Session [d35673f0-0f8a-11e5-9e81-43e65ad519a2] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63467223&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:07:52.065Z] Session [d35673f0-0f8a-11e5-9e81-43e65ad519a2] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:07:52.065Z] Session [d35673f0-0f8a-11e5-9e81-43e65ad519a2] - page.onError - stack:
+  I (http://mike.iheartmedia.com/articles/whats-hot-461580/photos-nadeea-volianova-looks-sexy-as-13662830:18)
+  h (http://mike.iheartmedia.com/articles/whats-hot-461580/photos-nadeea-volianova-looks-sexy-as-13662830:8)
+[INFO  - 2015-06-10T16:08:21.971Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:08:24.137Z] GhostDriver - Main - running on port 23188
+[INFO  - 2015-06-10T16:08:24.563Z] Session [ec171f70-0f8a-11e5-a044-bda70d870650] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:08:24.563Z] Session [ec171f70-0f8a-11e5-a044-bda70d870650] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:08:24.563Z] Session [ec171f70-0f8a-11e5-a044-bda70d870650] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:08:24.564Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: ec171f70-0f8a-11e5-a044-bda70d870650
+[ERROR - 2015-06-10T16:08:27.770Z] Session [ec171f70-0f8a-11e5-a044-bda70d870650] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:08:27.770Z] Session [ec171f70-0f8a-11e5-a044-bda70d870650] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:08:32.915Z] Session [ec171f70-0f8a-11e5-a044-bda70d870650] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:08:32.916Z] Session [ec171f70-0f8a-11e5-a044-bda70d870650] - page.onError - stack:
+  I (http://mike.iheartmedia.com/articles/whats-hot-461580/photos-nadeea-volianova-looks-sexy-as-13662830:18)
+  h (http://mike.iheartmedia.com/articles/whats-hot-461580/photos-nadeea-volianova-looks-sexy-as-13662830:8)
+[INFO  - 2015-06-10T16:08:32.960Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:08:35.142Z] GhostDriver - Main - running on port 20924
+[INFO  - 2015-06-10T16:08:35.551Z] Session [f2a39b20-0f8a-11e5-88e8-b9e87f431394] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:08:35.551Z] Session [f2a39b20-0f8a-11e5-88e8-b9e87f431394] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:08:35.551Z] Session [f2a39b20-0f8a-11e5-88e8-b9e87f431394] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:08:35.551Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f2a39b20-0f8a-11e5-88e8-b9e87f431394
+[ERROR - 2015-06-10T16:08:38.789Z] Session [f2a39b20-0f8a-11e5-88e8-b9e87f431394] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:08:38.789Z] Session [f2a39b20-0f8a-11e5-88e8-b9e87f431394] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:08:39.420Z] Session [f2a39b20-0f8a-11e5-88e8-b9e87f431394] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:08:39.420Z] Session [f2a39b20-0f8a-11e5-88e8-b9e87f431394] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:08:42.623Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:08:44.779Z] GhostDriver - Main - running on port 4383
+[INFO  - 2015-06-10T16:08:45.212Z] Session [f865c1f0-0f8a-11e5-a8bc-a54c5bf4bdbb] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:08:45.212Z] Session [f865c1f0-0f8a-11e5-a8bc-a54c5bf4bdbb] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:08:45.212Z] Session [f865c1f0-0f8a-11e5-a8bc-a54c5bf4bdbb] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:08:45.213Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f865c1f0-0f8a-11e5-a8bc-a54c5bf4bdbb
+[ERROR - 2015-06-10T16:08:49.956Z] Session [f865c1f0-0f8a-11e5-a8bc-a54c5bf4bdbb] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:08:49.956Z] Session [f865c1f0-0f8a-11e5-a8bc-a54c5bf4bdbb] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:08:55.285Z] Session [f865c1f0-0f8a-11e5-a8bc-a54c5bf4bdbb] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:08:55.285Z] Session [f865c1f0-0f8a-11e5-a8bc-a54c5bf4bdbb] - page.onError - stack:
+  I (http://mike.iheartmedia.com/onair/elvis-duran-54636/phone-tap-wilson-is-going-to-13662623:18)
+  h (http://mike.iheartmedia.com/onair/elvis-duran-54636/phone-tap-wilson-is-going-to-13662623:8)
+  appendChild (:0)
+  append (https://connect.facebook.net/en_US/all.js:66)
+  appendHidden (https://connect.facebook.net/en_US/all.js:66)
+  (anonymous function) (https://connect.facebook.net/en_US/all.js:98)
+  i (https://connect.facebook.net/en_US/all.js:65)
+[ERROR - 2015-06-10T16:09:25.557Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952565510
+[INFO  - 2015-06-10T16:09:26.332Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:09:28.514Z] GhostDriver - Main - running on port 31511
+[INFO  - 2015-06-10T16:09:28.929Z] Session [12749850-0f8b-11e5-8a87-c99b62a31994] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:09:28.929Z] Session [12749850-0f8b-11e5-8a87-c99b62a31994] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:09:28.930Z] Session [12749850-0f8b-11e5-8a87-c99b62a31994] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:09:28.930Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 12749850-0f8b-11e5-8a87-c99b62a31994
+[ERROR - 2015-06-10T16:09:32.186Z] Session [12749850-0f8b-11e5-8a87-c99b62a31994] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:09:32.187Z] Session [12749850-0f8b-11e5-8a87-c99b62a31994] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:09:35.341Z] Session [12749850-0f8b-11e5-8a87-c99b62a31994] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:09:35.341Z] Session [12749850-0f8b-11e5-8a87-c99b62a31994] - page.customHeaders:  - {}
+[ERROR - 2015-06-10T16:09:35.409Z] Session [12749850-0f8b-11e5-8a87-c99b62a31994] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:09:35.409Z] Session [12749850-0f8b-11e5-8a87-c99b62a31994] - page.onError - stack:
+  I (http://mike.iheartmedia.com/photos/hot-shots/hot-shots-82581/:18)
+  h (http://mike.iheartmedia.com/photos/hot-shots/hot-shots-82581/:8)
+[INFO  - 2015-06-10T16:09:37.999Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:09:40.163Z] GhostDriver - Main - running on port 41213
+[INFO  - 2015-06-10T16:09:40.586Z] Session [19674fe0-0f8b-11e5-a074-a522062fa13f] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:09:40.586Z] Session [19674fe0-0f8b-11e5-a074-a522062fa13f] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:09:40.587Z] Session [19674fe0-0f8b-11e5-a074-a522062fa13f] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:09:40.587Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 19674fe0-0f8b-11e5-a074-a522062fa13f
+[ERROR - 2015-06-10T16:09:44.003Z] Session [19674fe0-0f8b-11e5-a074-a522062fa13f] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:09:44.003Z] Session [19674fe0-0f8b-11e5-a074-a522062fa13f] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:09:47.990Z] Session [19674fe0-0f8b-11e5-a074-a522062fa13f] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:09:47.990Z] Session [19674fe0-0f8b-11e5-a074-a522062fa13f] - page.onError - stack:
+  I (http://mike.iheartmedia.com/articles/whats-hot-461580/photos-nadeea-volianova-looks-sexy-as-13662830:18)
+  h (http://mike.iheartmedia.com/articles/whats-hot-461580/photos-nadeea-volianova-looks-sexy-as-13662830:8)
+[ERROR - 2015-06-10T16:10:17.967Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952617931
+[INFO  - 2015-06-10T16:10:18.556Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:10:20.707Z] GhostDriver - Main - running on port 14812
+[INFO  - 2015-06-10T16:10:21.147Z] Session [31946df0-0f8b-11e5-9d24-d96dce89e966] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:10:21.147Z] Session [31946df0-0f8b-11e5-9d24-d96dce89e966] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:10:21.147Z] Session [31946df0-0f8b-11e5-9d24-d96dce89e966] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:10:21.148Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 31946df0-0f8b-11e5-9d24-d96dce89e966
+[INFO  - 2015-06-10T16:10:23.785Z] Session [31946df0-0f8b-11e5-9d24-d96dce89e966] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:10:23.785Z] Session [31946df0-0f8b-11e5-9d24-d96dce89e966] - page.customHeaders:  - {}
+[ERROR - 2015-06-10T16:10:24.959Z] Session [31946df0-0f8b-11e5-9d24-d96dce89e966] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:10:24.960Z] Session [31946df0-0f8b-11e5-9d24-d96dce89e966] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63467223&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:10:27.079Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:10:29.230Z] GhostDriver - Main - running on port 28868
+[INFO  - 2015-06-10T16:10:29.653Z] Session [36a71ae0-0f8b-11e5-9e7f-03f2fd463916] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:10:29.653Z] Session [36a71ae0-0f8b-11e5-9e7f-03f2fd463916] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:10:29.653Z] Session [36a71ae0-0f8b-11e5-9e7f-03f2fd463916] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:10:29.653Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 36a71ae0-0f8b-11e5-9e7f-03f2fd463916
+[INFO  - 2015-06-10T16:10:34.721Z] Session [36a71ae0-0f8b-11e5-9e7f-03f2fd463916] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:10:34.721Z] Session [36a71ae0-0f8b-11e5-9e7f-03f2fd463916] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:11:08.493Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:11:10.676Z] GhostDriver - Main - running on port 35142
+[INFO  - 2015-06-10T16:11:11.083Z] Session [4f580ef0-0f8b-11e5-952c-1df95a52cdd1] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:11:11.083Z] Session [4f580ef0-0f8b-11e5-952c-1df95a52cdd1] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:11:11.083Z] Session [4f580ef0-0f8b-11e5-952c-1df95a52cdd1] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:11:11.083Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 4f580ef0-0f8b-11e5-952c-1df95a52cdd1
+[ERROR - 2015-06-10T16:11:42.361Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952702323
+[INFO  - 2015-06-10T16:11:42.692Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:11:33.747Z] Session [5cdb12c0-0f8b-11e5-8d13-5b41b4a871bd] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:11:33.747Z] Session [5cdb12c0-0f8b-11e5-8d13-5b41b4a871bd] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:11:33.747Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 5cdb12c0-0f8b-11e5-8d13-5b41b4a871bd
+[ERROR - 2015-06-10T16:11:37.305Z] Session [5cdb12c0-0f8b-11e5-8d13-5b41b4a871bd] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:11:37.305Z] Session [5cdb12c0-0f8b-11e5-8d13-5b41b4a871bd] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:11:39.769Z] Session [5cdb12c0-0f8b-11e5-8d13-5b41b4a871bd] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:11:39.769Z] Session [5cdb12c0-0f8b-11e5-8d13-5b41b4a871bd] - page.onError - stack:
+  I (http://mike.iheartmedia.com/main.html:18)
+  h (http://mike.iheartmedia.com/main.html:8)
+[ERROR - 2015-06-10T16:11:40.297Z] Session [5cdb12c0-0f8b-11e5-8d13-5b41b4a871bd] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:11:40.297Z] Session [5cdb12c0-0f8b-11e5-8d13-5b41b4a871bd] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:12:09.414Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952729369
+[INFO  - 2015-06-10T16:12:10.659Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:11:45.285Z] Session [63bade90-0f8b-11e5-a4c4-7fd8c5843d38] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:11:45.285Z] Session [63bade90-0f8b-11e5-a4c4-7fd8c5843d38] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:11:45.285Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 63bade90-0f8b-11e5-a4c4-7fd8c5843d38
+[ERROR - 2015-06-10T16:12:17.884Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952737828
+[INFO  - 2015-06-10T16:12:18.187Z] ShutdownReqHand - _handle - About to shutdown
+seWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:12:13.252Z] Session [7466c0b0-0f8b-11e5-a6d9-619573f94ea8] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:12:13.252Z] Session [7466c0b0-0f8b-11e5-a6d9-619573f94ea8] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:12:13.252Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 7466c0b0-0f8b-11e5-a6d9-619573f94ea8
+[ERROR - 2015-06-10T16:12:16.555Z] Session [7466c0b0-0f8b-11e5-a6d9-619573f94ea8] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:12:16.556Z] Session [7466c0b0-0f8b-11e5-a6d9-619573f94ea8] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63467223&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:12:23.575Z] Session [7466c0b0-0f8b-11e5-a6d9-619573f94ea8] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:12:23.576Z] Session [7466c0b0-0f8b-11e5-a6d9-619573f94ea8] - page.onError - stack:
+  I (http://mike.iheartmedia.com/articles/whats-hot-461580/photos-nadeea-volianova-looks-sexy-as-13662830:18)
+  h (http://mike.iheartmedia.com/articles/whats-hot-461580/photos-nadeea-volianova-looks-sexy-as-13662830:8)
+[INFO  - 2015-06-10T16:12:53.467Z] ShutdownReqHand - _handle - About to shutdown
+6e5] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:12:20.776Z] Session [78e284d0-0f8b-11e5-9745-9d303b0766e5] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:12:20.776Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 78e284d0-0f8b-11e5-9745-9d303b0766e5
+[ERROR - 2015-06-10T16:12:53.636Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952773582
+[INFO  - 2015-06-10T16:12:53.935Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:12:55.640Z] GhostDriver - Main - running on port 25681
+[INFO  - 2015-06-10T16:12:56.048Z] Session [8de93590-0f8b-11e5-aba3-5b7712b469d1] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:12:56.048Z] Session [8de93590-0f8b-11e5-aba3-5b7712b469d1] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:12:56.048Z] Session [8de93590-0f8b-11e5-aba3-5b7712b469d1] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:12:56.049Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8de93590-0f8b-11e5-aba3-5b7712b469d1
+[ERROR - 2015-06-10T16:13:00.059Z] Session [8de93590-0f8b-11e5-aba3-5b7712b469d1] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:13:00.060Z] Session [8de93590-0f8b-11e5-aba3-5b7712b469d1] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63467223&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:13:06.345Z] ShutdownReqHand - _handle - About to shutdown
+10T16:12:56.517Z] Session [8e3077c0-0f8b-11e5-ac53-51eeef50c2cf] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:12:56.517Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8e3077c0-0f8b-11e5-ac53-51eeef50c2cf
+[ERROR - 2015-06-10T16:13:27.806Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952807787
+[INFO  - 2015-06-10T16:13:28.120Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:13:08.934Z] Session [9596b1a0-0f8b-11e5-9392-e33c92faa2a2] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:13:08.934Z] Session [9596b1a0-0f8b-11e5-9392-e33c92faa2a2] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:13:08.935Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 9596b1a0-0f8b-11e5-9392-e33c92faa2a2
+[ERROR - 2015-06-10T16:13:12.265Z] Session [9596b1a0-0f8b-11e5-9392-e33c92faa2a2] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:13:12.266Z] Session [9596b1a0-0f8b-11e5-9392-e33c92faa2a2] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:13:12.835Z] Session [9596b1a0-0f8b-11e5-9392-e33c92faa2a2] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:13:12.835Z] Session [9596b1a0-0f8b-11e5-9392-e33c92faa2a2] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:13:14.526Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:13:16.705Z] GhostDriver - Main - running on port 24903
+[INFO  - 2015-06-10T16:13:17.114Z] Session [9a76dce0-0f8b-11e5-b939-3b486cc073bd] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:13:17.114Z] Session [9a76dce0-0f8b-11e5-b939-3b486cc073bd] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:13:17.114Z] Session [9a76dce0-0f8b-11e5-b939-3b486cc073bd] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:13:17.115Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 9a76dce0-0f8b-11e5-b939-3b486cc073bd
+[ERROR - 2015-06-10T16:13:21.280Z] Session [9a76dce0-0f8b-11e5-b939-3b486cc073bd] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:13:21.280Z] Session [9a76dce0-0f8b-11e5-b939-3b486cc073bd] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:13:25.857Z] Session [9a76dce0-0f8b-11e5-b939-3b486cc073bd] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:13:25.858Z] Session [9a76dce0-0f8b-11e5-b939-3b486cc073bd] - page.onError - stack:
+  I (http://mike.iheartmedia.com/onair/elvis-duran-54636/phone-tap-wilson-is-going-to-13662623:18)
+  h (http://mike.iheartmedia.com/onair/elvis-duran-54636/phone-tap-wilson-is-going-to-13662623:8)
+  appendChild (:0)
+  append (https://connect.facebook.net/en_US/all.js:66)
+  appendHidden (https://connect.facebook.net/en_US/all.js:66)
+  (anonymous function) (https://connect.facebook.net/en_US/all.js:98)
+  i (https://connect.facebook.net/en_US/all.js:65)
+[ERROR - 2015-06-10T16:13:56.101Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952836096
+[INFO  - 2015-06-10T16:13:56.897Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:13:30.713Z] Session [a291e7d0-0f8b-11e5-98d8-05074249db12] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:13:30.713Z] Session [a291e7d0-0f8b-11e5-98d8-05074249db12] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:13:30.713Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a291e7d0-0f8b-11e5-98d8-05074249db12
+[ERROR - 2015-06-10T16:14:01.713Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952841684
+[INFO  - 2015-06-10T16:14:02.104Z] ShutdownReqHand - _handle - About to shutdown
+seWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:13:38.953Z] Session [a77bd710-0f8b-11e5-a81a-792eb552d84e] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:13:38.953Z] Session [a77bd710-0f8b-11e5-a81a-792eb552d84e] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:13:38.953Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a77bd710-0f8b-11e5-a81a-792eb552d84e
+[ERROR - 2015-06-10T16:13:43.529Z] Session [a77bd710-0f8b-11e5-a81a-792eb552d84e] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:13:43.529Z] Session [a77bd710-0f8b-11e5-a81a-792eb552d84e] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63467223&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:13:43.939Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:13:46.112Z] GhostDriver - Main - running on port 19380
+[INFO  - 2015-06-10T16:13:46.526Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:13:46.526Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:13:46.526Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:13:46.527Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: abff6360-0f8b-11e5-9d48-099501424322
+[ERROR - 2015-06-10T16:13:51.391Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:13:51.391Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:13:57.012Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:13:57.012Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - page.onError - stack:
+  I (http://www.y100.com/articles/trending-104650/watch-this-taylor-swift-we-are-13666780:18)
+  h (http://www.y100.com/articles/trending-104650/watch-this-taylor-swift-we-are-13666780:8)
+[INFO  - 2015-06-10T16:13:57.267Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:13:57.267Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - page.customHeaders:  - {}
+[ERROR - 2015-06-10T16:13:58.223Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:13:58.223Z] Session [abff6360-0f8b-11e5-9d48-099501424322] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:13:59.764Z] ShutdownReqHand - _handle - About to shutdown
+O  - 2015-06-10T16:13:59.477Z] Session [b3b7b4e0-0f8b-11e5-81a0-bf95d5b618ff] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:13:59.477Z] Session [b3b7b4e0-0f8b-11e5-81a0-bf95d5b618ff] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:13:59.477Z] Session [b3b7b4e0-0f8b-11e5-81a0-bf95d5b618ff] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:13:59.477Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b3b7b4e0-0f8b-11e5-81a0-bf95d5b618ff
+[ERROR - 2015-06-10T16:14:04.740Z] Session [b3b7b4e0-0f8b-11e5-81a0-bf95d5b618ff] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:14:04.740Z] Session [b3b7b4e0-0f8b-11e5-81a0-bf95d5b618ff] - page.onError - stack:
+  I (http://mike.iheartmedia.com/photos/hot-shots/hot-shots-82581/:18)
+  h (http://mike.iheartmedia.com/photos/hot-shots/hot-shots-82581/:8)
+[INFO  - 2015-06-10T16:14:05.138Z] Session [b3b7b4e0-0f8b-11e5-81a0-bf95d5b618ff] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:14:05.139Z] Session [b3b7b4e0-0f8b-11e5-81a0-bf95d5b618ff] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:14:06.170Z] ShutdownReqHand - _handle - About to shutdown
+Enabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:14:02.861Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b5bbe950-0f8b-11e5-9ff4-5dbb61d5d636
+[INFO  - 2015-06-10T16:14:07.250Z] ShutdownReqHand - _handle - About to shutdown
+FO  - 2015-06-10T16:14:04.681Z] Session [b6d1c620-0f8b-11e5-be69-138f6420de9a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:14:04.681Z] Session [b6d1c620-0f8b-11e5-be69-138f6420de9a] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:14:04.681Z] Session [b6d1c620-0f8b-11e5-be69-138f6420de9a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:14:04.681Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b6d1c620-0f8b-11e5-be69-138f6420de9a
+[ERROR - 2015-06-10T16:14:35.854Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952875794
+[INFO  - 2015-06-10T16:14:36.170Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:14:08.748Z] Session [b93e5950-0f8b-11e5-8f78-05e5cd442c47] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:14:08.748Z] Session [b93e5950-0f8b-11e5-8f78-05e5cd442c47] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:14:08.748Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b93e5950-0f8b-11e5-8f78-05e5cd442c47
+[ERROR - 2015-06-10T16:14:13.082Z] Session [b93e5950-0f8b-11e5-8f78-05e5cd442c47] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:14:13.082Z] Session [b93e5950-0f8b-11e5-8f78-05e5cd442c47] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63467223&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:14:15.901Z] Session [b93e5950-0f8b-11e5-8f78-05e5cd442c47] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:14:15.901Z] Session [b93e5950-0f8b-11e5-8f78-05e5cd442c47] - page.onError - stack:
+  I (http://mike.iheartmedia.com/articles/whats-hot-461580/photos-nadeea-volianova-looks-sexy-as-13662830:18)
+  h (http://mike.iheartmedia.com/articles/whats-hot-461580/photos-nadeea-volianova-looks-sexy-as-13662830:8)
+[ERROR - 2015-06-10T16:14:45.823Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952885770
+[INFO  - 2015-06-10T16:14:46.409Z] ShutdownReqHand - _handle - About to shutdown
+onCommand - New Session Created: b9e34be0-0f8b-11e5-8e72-5b67e2872b8a
+[ERROR - 2015-06-10T16:14:13.743Z] Session [b9e34be0-0f8b-11e5-8e72-5b67e2872b8a] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:14:13.743Z] Session [b9e34be0-0f8b-11e5-8e72-5b67e2872b8a] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:14:14.136Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:14:16.315Z] GhostDriver - Main - running on port 46681
+[INFO  - 2015-06-10T16:14:16.727Z] Session [bdfeeea0-0f8b-11e5-959d-a3a9f92a9e5a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:14:16.727Z] Session [bdfeeea0-0f8b-11e5-959d-a3a9f92a9e5a] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:14:16.727Z] Session [bdfeeea0-0f8b-11e5-959d-a3a9f92a9e5a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:14:16.728Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: bdfeeea0-0f8b-11e5-959d-a3a9f92a9e5a
+[ERROR - 2015-06-10T16:14:21.827Z] Session [bdfeeea0-0f8b-11e5-959d-a3a9f92a9e5a] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:14:21.827Z] Session [bdfeeea0-0f8b-11e5-959d-a3a9f92a9e5a] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:14:28.483Z] Session [bdfeeea0-0f8b-11e5-959d-a3a9f92a9e5a] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:14:28.483Z] Session [bdfeeea0-0f8b-11e5-959d-a3a9f92a9e5a] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:14:28.619Z] Session [bdfeeea0-0f8b-11e5-959d-a3a9f92a9e5a] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:14:28.619Z] Session [bdfeeea0-0f8b-11e5-959d-a3a9f92a9e5a] - page.onError - stack:
+  I (http://www.y100.com/onair/ryan-seacrest-52241/ryan-seacrests-quote-of-the-day-13666662:18)
+  h (http://www.y100.com/onair/ryan-seacrest-52241/ryan-seacrests-quote-of-the-day-13666662:8)
+  appendChild (:0)
+  (anonymous function) (http://www.y100.com/onair/ryan-seacrest-52241/ryan-seacrests-quote-of-the-day-13666662:1)
+[ERROR - 2015-06-10T16:14:57.552Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952897535
+[ERROR - 2015-06-10T16:15:28.738Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952928693
+[INFO  - 2015-06-10T16:15:29.787Z] ShutdownReqHand - _handle - About to shutdown
+:"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:14:38.753Z] Session [cb207180-0f8b-11e5-be75-f3795f0c30c0] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:14:38.753Z] Session [cb207180-0f8b-11e5-be75-f3795f0c30c0] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:14:38.753Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: cb207180-0f8b-11e5-be75-f3795f0c30c0
+[ERROR - 2015-06-10T16:15:09.855Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952909850
+[INFO  - 2015-06-10T16:15:10.184Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:14:48.997Z] Session [d13b3fa0-0f8b-11e5-a4d6-09afeb697aec] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:14:48.998Z] Session [d13b3fa0-0f8b-11e5-a4d6-09afeb697aec] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:14:48.998Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d13b3fa0-0f8b-11e5-a4d6-09afeb697aec
+[INFO  - 2015-06-10T16:14:51.538Z] Session [d13b3fa0-0f8b-11e5-a4d6-09afeb697aec] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:14:51.538Z] Session [d13b3fa0-0f8b-11e5-a4d6-09afeb697aec] - page.customHeaders:  - {}
+[ERROR - 2015-06-10T16:14:52.564Z] Session [d13b3fa0-0f8b-11e5-a4d6-09afeb697aec] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:14:52.564Z] Session [d13b3fa0-0f8b-11e5-a4d6-09afeb697aec] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:14:54.213Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:14:56.379Z] GhostDriver - Main - running on port 32056
+[INFO  - 2015-06-10T16:14:56.800Z] Session [d5e19630-0f8b-11e5-a787-e1611c9fdbc9] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:14:56.800Z] Session [d5e19630-0f8b-11e5-a787-e1611c9fdbc9] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:14:56.800Z] Session [d5e19630-0f8b-11e5-a787-e1611c9fdbc9] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:14:56.800Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d5e19630-0f8b-11e5-a787-e1611c9fdbc9
+[INFO  - 2015-06-10T16:15:00.855Z] Session [d5e19630-0f8b-11e5-a787-e1611c9fdbc9] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:15:00.855Z] Session [d5e19630-0f8b-11e5-a787-e1611c9fdbc9] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:15:32.565Z] ShutdownReqHand - _handle - About to shutdown
+FO  - 2015-06-10T16:15:32.379Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe014] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:15:32.379Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe014] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:15:32.379Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe014] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:15:32.380Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: eb16a9f0-0f8b-11e5-857a-11ad692fe014
+[ERROR - 2015-06-10T16:15:36.370Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe014] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:15:36.370Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe014] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:15:38.586Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe014] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:15:38.586Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe014] - page.customHeaders:  - {}
+[ERROR - 2015-06-10T16:15:40.096Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe014] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:15:40.096Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe0[ERROR - 2015-06-10T16:16:06.689Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952966644
+[INFO  - 2015-06-10T16:16:06.999Z] ShutdownReqHand - _handle - About to shutdown
+ymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:15:41.385Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe014] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:15:41.385Z] Session [eb16a9f0-0f8b-11e5-857a-11ad692fe014] - page.onError - stack:
+  I (http://www.y100.com/photos/icons/pop-pics-948/:18)
+  h (http://www.y100.com/photos/icons/pop-pics-948/:8)
+[INFO  - 2015-06-10T16:15:41.755Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:15:43.927Z] GhostDriver - Main - running on port 1074
+[INFO  - 2015-06-10T16:15:44.339Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:15:44.339Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:15:44.339Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:15:44.339Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f23839b0-0f8b-11e5-96d8-bbdc87be49fe
+[ERROR - 2015-06-10T16:15:49.556Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:15:49.557Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:15:53.068Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:15:53.069Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - page.onError - stack:
+  I (http://www.y100.com/articles/trending-104650/watch-this-taylor-swift-we-are-13666780:18)
+  h (http://www.y100.com/articles/trending-104650/watch-this-taylor-swift-we-are-13666780:8)
+[ERROR - 2015-06-10T16:15:53.921Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'm.data.split('|')')
+[ERROR - 2015-06-10T16:15:53.921Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - page.onError - stack:
+  (anonymous function) (http://mono.vizu.com/cdn/00/02/28/64/smart_tag.js?vzadid=63396798&vzsid=N4478.132510MILLENNIUMTVSALES&vzplid=117601605&ord=3090402751&quot;type=&quot;text/javascript&quot;:28)
+  g (http://mono.vizu.com/cdn/00/02/28/64/smart_tag.js?vzadid=63396798&vzsid=N4478.132510MILLENNIUMTVSALES&vzplid=117601605&ord=3090402751&quot;type=&quot;text/javascript&quot;:1)
+[ERROR - 2015-06-10T16:15:54.204Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:15:54.204Z] Session [f23839b0-0f8b-11e5-96d8-bbdc87be49fe] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[ERROR - 2015-06-10T16:16:23.323Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433952983277
+[INFO  - 2015-06-10T16:16:24.336Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:16:09.595Z] Session [01458700-0f8c-11e5-b742-9da361bfc1ed] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:16:09.596Z] Session [01458700-0f8c-11e5-b742-9da361bfc1ed] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:16:09.596Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 01458700-0f8c-11e5-b742-9da361bfc1ed
+[ERROR - 2015-06-10T16:16:42.266Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433953002248
+[INFO  - 2015-06-10T16:16:42.573Z] ShutdownReqHand - _handle - About to shutdown
+seWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:16:26.915Z] Session [0b98ceb0-0f8c-11e5-a8c6-1d1ade1a1c67] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:16:26.915Z] Session [0b98ceb0-0f8c-11e5-a8c6-1d1ade1a1c67] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:16:26.915Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 0b98ceb0-0f8c-11e5-a8c6-1d1ade1a1c67
+[INFO  - 2015-06-10T16:16:30.175Z] Session [0b98ceb0-0f8c-11e5-a8c6-1d1ade1a1c67] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:16:30.175Z] Session [0b98ceb0-0f8c-11e5-a8c6-1d1ade1a1c67] - page.customHeaders:  - {}
+[ERROR - 2015-06-10T16:16:31.350Z] Session [0b98ceb0-0f8c-11e5-a8c6-1d1ade1a1c67] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:16:31.350Z] Session [0b98ceb0-0f8c-11e5-a8c6-1d1ade1a1c67] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:16:34.513Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:16:36.674Z] GhostDriver - Main - running on port 38931
+[INFO  - 2015-06-10T16:16:37.097Z] Session [11a9ffe0-0f8c-11e5-abc1-c99c1a2e6bc6] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:16:37.097Z] Session [11a9ffe0-0f8c-11e5-abc1-c99c1a2e6bc6] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:16:37.098Z] Session [11a9ffe0-0f8c-11e5-abc1-c99c1a2e6bc6] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:16:37.098Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 11a9ffe0-0f8c-11e5-abc1-c99c1a2e6bc6
+[INFO  - 2015-06-10T16:16:47.447Z] Session [11a9ffe0-0f8c-11e5-abc1-c99c1a2e6bc6] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:16:47.447Z] Session [11a9ffe0-0f8c-11e5-abc1-c99c1a2e6bc6] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:16:49.277Z] ShutdownReqHand - _handle - About to shutdown
+O  - 2015-06-10T16:16:45.162Z] Session [167877e0-0f8c-11e5-899f-9fd960191389] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:16:45.162Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 167877e0-0f8c-11e5-899f-9fd960191389
+[ERROR - 2015-06-10T16:17:18.039Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433953038016
+[INFO  - 2015-06-10T16:17:18.341Z] ShutdownReqHand - _handle - About to shutdown
+seWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:16:51.864Z] Session [1a771cc0-0f8c-11e5-a831-bf5f0a5937d1] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:16:51.864Z] Session [1a771cc0-0f8c-11e5-a831-bf5f0a5937d1] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:16:51.865Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 1a771cc0-0f8c-11e5-a831-bf5f0a5937d1
+[INFO  - 2015-06-10T16:17:02.275Z] Session [1a771cc0-0f8c-11e5-a831-bf5f0a5937d1] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:17:02.275Z] Session [1a771cc0-0f8c-11e5-a831-bf5f0a5937d1] - page.customHeaders:  - {}
+[ERROR - 2015-06-10T16:17:02.363Z] Session [1a771cc0-0f8c-11e5-a831-bf5f0a5937d1] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:17:02.364Z] Session [1a771cc0-0f8c-11e5-a831-bf5f0a5937d1] - page.onError - stack:
+  I (http://www.radio1057.com/articles/weird-news-104673/man-sues-actress-for-staring-at-13667094:18)
+  h (http://www.radio1057.com/articles/weird-news-104673/man-sues-actress-for-staring-at-13667094:8)
+[INFO  - 2015-06-10T16:17:04.415Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:17:06.578Z] GhostDriver - Main - running on port 36278
+[INFO  - 2015-06-10T16:17:07.002Z] Session [237cfce0-0f8c-11e5-80a4-eb0cfee6765d] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:17:07.002Z] Session [237cfce0-0f8c-11e5-80a4-eb0cfee6765d] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:17:07.002Z] Session [237cfce0-0f8c-11e5-80a4-eb0cfee6765d] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:17:07.003Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 237cfce0-0f8c-11e5-80a4-eb0cfee6765d
+[ERROR - 2015-06-10T16:17:17.052Z] Session [237cfce0-0f8c-11e5-80a4-eb0cfee6765d] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:17:17.053Z] Session [237cfce0-0f8c-11e5-80a4-eb0cfee6765d] - page.onError - stack:
+  I (http://www.radio1057.com/articles/weird-news-104673/man-sues-actress-for-staring-at-13667094:18)
+  h (http://www.radio1057.com/articles/weird-news-104673/man-sues-actress-for-staring-at-13667094:8)
+[INFO  - 2015-06-10T16:17:17.120Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:17:19.286Z] GhostDriver - Main - running on port 29897
+[INFO  - 2015-06-10T16:17:19.694Z] Session [2b0e6570-0f8c-11e5-8a99-efb61b044ef7] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:17:19.694Z] Session [2b0e6570-0f8c-11e5-8a99-efb61b044ef7] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:17:19.694Z] Session [2b0e6570-0f8c-11e5-8a99-efb61b044ef7] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:17:19.694Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 2b0e6570-0f8c-11e5-8a99-efb61b044ef7
+[INFO  - 2015-06-10T16:17:23.907Z] Session [2b0e6570-0f8c-11e5-8a99-efb61b044ef7] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:17:23.907Z] Session [2b0e6570-0f8c-11e5-8a99-efb61b044ef7] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:17:27.109Z] ShutdownReqHand - _handle - About to shutdown
+FO  - 2015-06-10T16:17:20.930Z] Session [2bca3b60-0f8c-11e5-a0c0-93f19a9599da] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:17:20.931Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 2bca3b60-0f8c-11e5-a0c0-93f19a9599da
+[ERROR - 2015-06-10T16:17:51.945Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433953071913
+[INFO  - 2015-06-10T16:17:52.261Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:17:29.699Z] Session [31041f60-0f8c-11e5-8dfb-95271d4f766d] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:17:29.699Z] Session [31041f60-0f8c-11e5-8dfb-95271d4f766d] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:17:29.699Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 31041f60-0f8c-11e5-8dfb-95271d4f766d
+[ERROR - 2015-06-10T16:17:40.274Z] Session [31041f60-0f8c-11e5-8dfb-95271d4f766d] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:17:40.275Z] Session [31041f60-0f8c-11e5-8dfb-95271d4f766d] - page.onError - stack:
+  I (http://www.radio1057.com/onair/knox-51686/check-out-whos-dressed-like-frank-13666735:18)
+  h (http://www.radio1057.com/onair/knox-51686/check-out-whos-dressed-like-frank-13666735:8)
+[ERROR - 2015-06-10T16:18:10.264Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433953090262
+[INFO  - 2015-06-10T16:18:11.298Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:17:54.847Z] Session [40022a70-0f8c-11e5-9a6c-4dd9f451175a] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:17:54.847Z] Session [40022a70-0f8c-11e5-9a6c-4dd9f451175a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:17:54.847Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 40022a70-0f8c-11e5-9a6c-4dd9f451175a
+[ERROR - 2015-06-10T16:18:25.826Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433953105818
+[INFO  - 2015-06-10T16:18:26.143Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:18:13.890Z] Session [4b5b7070-0f8c-11e5-b59b-bf4a4ac38490] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:18:13.890Z] Session [4b5b7070-0f8c-11e5-b59b-bf4a4ac38490] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:18:13.891Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 4b5b7070-0f8c-11e5-b59b-bf4a4ac38490
+[INFO  - 2015-06-10T16:18:21.909Z] Session [4b5b7070-0f8c-11e5-b59b-bf4a4ac38490] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:18:21.910Z] Session [4b5b7070-0f8c-11e5-b59b-bf4a4ac38490] - page.customHeaders:  - {}
+[ERROR - 2015-06-10T16:18:22.026Z] Session [4b5b7070-0f8c-11e5-b59b-bf4a4ac38490] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:18:22.026Z] Session [4b5b7070-0f8c-11e5-b59b-bf4a4ac38490] - page.onError - stack:
+  I (http://www.radio1057.com/photos/photos-that-rock/music-history-landmarks-424896/:18)
+  h (http://www.radio1057.com/photos/photos-that-rock/music-history-landmarks-424896/:8)
+[INFO  - 2015-06-10T16:18:23.233Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:18:25.384Z] GhostDriver - Main - running on port 48276
+[INFO  - 2015-06-10T16:18:25.819Z] Session [52775ae0-0f8c-11e5-8b44-0f03c3333cda] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:18:25.819Z] Session [52775ae0-0f8c-11e5-8b44-0f03c3333cda] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:18:25.819Z] Session [52775ae0-0f8c-11e5-8b44-0f03c3333cda] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:18:25.819Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 52775ae0-0f8c-11e5-8b44-0f03c3333cda
+[ERROR - 2015-06-10T16:18:33.671Z] Session [52775ae0-0f8c-11e5-8b44-0f03c3333cda] - page.onError - msg: TypeError: undefined is not an object (evaluating 'c.indexOf')
+[ERROR - 2015-06-10T16:18:33.671Z] Session [52775ae0-0f8c-11e5-8b44-0f03c3333cda] - page.onError - stack:
+  I (http://www.radio1057.com/articles/weird-news-104673/man-sues-actress-for-staring-at-13667094:18)
+  h (http://www.radio1057.com/articles/weird-news-104673/man-sues-actress-for-staring-at-13667094:8)
+[ERROR - 2015-06-10T16:19:03.759Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433953143731
+[INFO  - 2015-06-10T16:19:04.649Z] ShutdownReqHand - _handle - About to shutdown
+egotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:18:28.721Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 5432ed90-0f8c-11e5-9bf5-3bfa389089db
+[ERROR - 2015-06-10T16:18:59.759Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433953139734
+[INFO  - 2015-06-10T16:19:00.072Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:19:02.228Z] GhostDriver - Main - running on port 40923
+[INFO  - 2015-06-10T16:19:02.663Z] Session [686d74b0-0f8c-11e5-826e-7b35ff032ae0] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:19:02.664Z] Session [686d74b0-0f8c-11e5-826e-7b35ff032ae0] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:19:02.664Z] Session [686d74b0-0f8c-11e5-826e-7b35ff032ae0] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:19:02.664Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 686d74b0-0f8c-11e5-826e-7b35ff032ae0
+[ERROR - 2015-06-10T16:19:33.763Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1433953173716
+[INFO  - 2015-06-10T16:19:34.075Z] ShutdownReqHand - _handle - About to shutdown
+oseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:19:07.240Z] Session [6b27d9c0-0f8c-11e5-9124-2f94660f49ee] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:19:07.241Z] Session [6b27d9c0-0f8c-11e5-9124-2f94660f49ee] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:19:07.241Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 6b27d9c0-0f8c-11e5-9124-2f94660f49ee
+[INFO  - 2015-06-10T16:19:10.060Z] Session [6b27d9c0-0f8c-11e5-9124-2f94660f49ee] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:19:10.060Z] Session [6b27d9c0-0f8c-11e5-9124-2f94660f49ee] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:19:11.261Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-06-10T16:25:03.662Z] GhostDriver - Main - running on port 38394
+[INFO  - 2015-06-10T16:25:04.192Z] Session [3feb2a90-0f8d-11e5-8306-6989dea9089b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:25:04.192Z] Session [3feb2a90-0f8d-11e5-8306-6989dea9089b] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:25:04.192Z] Session [3feb2a90-0f8d-11e5-8306-6989dea9089b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-06-10T16:25:04.192Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 3feb2a90-0f8d-11e5-8306-6989dea9089b
+[ERROR - 2015-06-10T16:25:08.822Z] Session [3feb2a90-0f8d-11e5-8306-6989dea9089b] - page.onError - msg: TypeError: null is not an object (evaluating 'n.parentNode.insertBefore')
+[ERROR - 2015-06-10T16:25:08.822Z] Session [3feb2a90-0f8d-11e5-8306-6989dea9089b] - page.onError - stack:
+  i (http://b.voicefive.com/c2/6035701/rs.js#c1=3&amp;c3=8619316&amp;c4=63396798&amp;c5=117601605&amp;c6=&amp;c10=1&amp;c11=1985780&amp;c12=p332581054&amp;c13=300x600&amp;c16=dcm&amp;:1)
+  (anonymous function) (http://b.scorecardresearch.com/rs/bsl_lf.js:1)
+[INFO  - 2015-06-10T16:25:12.099Z] Session [3feb2a90-0f8d-11e5-8306-6989dea9089b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2015-06-10T16:25:12.099Z] Session [3feb2a90-0f8d-11e5-8306-6989dea9089b] - page.customHeaders:  - {}
+[INFO  - 2015-06-10T16:25:14.081Z] ShutdownReqHand - _handle - About to shutdown
