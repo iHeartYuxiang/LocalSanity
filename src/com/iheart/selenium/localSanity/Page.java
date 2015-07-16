@@ -8,27 +8,27 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.ArrayList;
 import java.io.IOException;  
-import java.net.HttpURLConnection;  
+import java.net.HttpURLConnection;
+import javax.net.ssl.HttpsURLConnection;
 import java.net.MalformedURLException;  
 import java.net.URL;  
 
-import org.apache.http.client.HttpClient;
 
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.commons.httpclient.methods.GetMethod; 
-
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.HttpClientBuilder;
 
 
 public abstract class Page {
@@ -120,6 +120,11 @@ public abstract class Page {
         	//Aren't null link and empty link suspicious?
         	try{
         		href  =	link.getAttribute("href").trim();
+        		//for mobilie site, replace "www." link with "m."
+        		if (isMobileSite(Page.getURL()) && href.contains("www." + getDomainName(url)))
+        			href = convertToMobileURL(href);
+        			
+        			
         		linkText = link.getText();
         		
         	}catch(Exception e)
@@ -129,31 +134,31 @@ public abstract class Page {
         	}
         	
 			if (href != null && !href.equals("") && !isAdLink(href) &&
-			     (!isSocial(href) && !isVoid(href)  && !isMobileNative(href)))
+			     !isSocial(href) && !isVoid(href)  && !isMobileNative(href) && !isJavaScriptAlert(href))
 			{	
 				
 				System.out.println("See link: " +  href );
 				try{
-			    	statusCode= getResponseCode(href); 
+					if (href.startsWith("https"))
+						//statusCode= getSSLResponseCode(href); 
+						statusCode= getResponseCodeViaHttpClient(href); 
+					else
+						statusCode= getResponseCode(href); 
 				}catch(Exception e)
 				{
 					//Only take care image src for bad links
-					
+					e.printStackTrace();
 					System.out.println("eXCEPTON IS THROWN FOR HREF/STATUS:" + href + "--------" + link.getText() );
 					
 					badLinks.add(new BadLink(linkText, href, -2)); //status code is not available
 				}
 				//System.out.println("HREF/STATUS:" + href + "/" + status );
-				if (statusCode != 200 && statusCode != 302)
+				if (statusCode != 200 && statusCode != 302 && statusCode != 301)
 				{	
 				    if (linkText.equals(""))
 				    {	
 				    	linkText = link.getAttribute("src");
-					    /*	
-		        		linkText = link.getAttribute("innerHTML");
-		        	    if (linkText.contains("<img"))
-		        	    	linkText = link.getAttribute("src");
-		        	    */	
+					   
 				    }	
 					
 					System.out.println("HREF/STATUS:" + href + "-----" + linkText + "-------" +  statusCode );
@@ -191,27 +196,69 @@ public abstract class Page {
 	
 	private int getResponseCode(String urlString) throws MalformedURLException, IOException {         
 	    URL u = new URL(urlString);  
+	   
 	    HttpURLConnection huc = (HttpURLConnection) u.openConnection();  
 	    huc.setRequestMethod("GET");  
 	    huc.connect();  
 	    System.out.println("response:" + huc.getResponseCode());
 	    return huc.getResponseCode();  
 	}
-	/*
-	private int getResponseCodeViaHttpClient(String href) throws MalformedURLException, IOException {         
-		HttpClient client = new HttpClientBuilder();
-		
-		GetMethod getMethod = new GetMethod(href);
-		int res = client.executeMethod(getMethod);
-		return res;
+	
+	private int getSSLResponseCode(String urlString) throws MalformedURLException, IOException {         
+	    URL u = new URL(urlString);  
+	  
+    	 HttpsURLConnection huc = (HttpsURLConnection) u.openConnection();  
+     
+	     
+    	
+    	 huc.setRequestMethod("GET");
+    	 huc.setRequestProperty("Content-Type","text/html");
+    	 
+    	
+    	try {
+	       huc.connect();
+    	}catch(Exception e)
+    	{   System.out.println("Exception trying to connect.");
+    		e.printStackTrace();
+    	}
+    	int responseCode = -1;
+    	try{
+    	    responseCode =	huc.getResponseCode();
+    	}catch(Exception ex)
+    	{
+    		System.out.println("Exception trying to get response code.");
+     		ex.printStackTrace();
+    	}
+	    System.out.println("response:" +  responseCode );
+	    return huc.getResponseCode();  
 	}
-	*/
+	
+	private int getResponseCodeViaHttpClient(String href) throws MalformedURLException, IOException 
+	{         
+		HttpClient client = HttpClientBuilder.create().build();
+		 final String USER_AGENT = "Mozilla/5.0";
+	
+		HttpGet request = new HttpGet(url);
+		 
+	//	request.setHeader("User-Agent", USER_AGENT);
+		request.setHeader("Accept",
+			"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+		request.setHeader("Accept-Language", "en-US,en;q=0.5");
+	 
+		HttpResponse response = client.execute(request);
+		int responseCode = response.getStatusLine().getStatusCode();
+	 
+		System.out.println("response:" +  responseCode );
+		
+		return responseCode;
+	}
+	
 	
 	public void handleError(String msg, String methodName) 
 	{
 		errors.append(msg);
 		try{
-		   Utils.takeScreenshot( driver,  methodName);
+		   Page.takeScreenshot( driver,  methodName);
 		}catch(Exception e)
 		{
 			System.out.println("Exception is thrown taking screenshot.");
@@ -252,6 +299,14 @@ public abstract class Page {
 		return url.contains("googleads.g.doubleclick.net");
 	}
 	
+	private boolean isJavaScriptAlert(String url)
+	{  // System.out.println("isJavaScriptAlert:" + url);
+		boolean isAlert = url.contains("javascript:");
+		if (isAlert) 
+			System.out.println("Shall return :" + isAlert) ;
+		return isAlert;
+	}
+	
 	/*
 	 * See source:<a href="/main.html" title="Tribeca's Best Music" name="&amp;lid=station_logo&amp;lpos=poc:Homepage:header" onclick="s.tl(this,'o','poc:Homepage:header:station_logo');s_objectID='pocHomepage:header:station_logo';" itemprop="url">
 	 * <img src="http://content.clearchannel.com/cc-common/mlib/15208/11/15208_1384545886.png?t=1" itemprop="logo"></a>
@@ -264,4 +319,46 @@ public abstract class Page {
 		
 	}
   */
+	public static void takeScreenshot(WebDriver driver, String testMethod) throws Exception 
+	   {      
+		        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+	   			Date date = new Date();
+	   			//System.out.println(dateFormat.format(date)); //2014/08/06 15:59:48
+		       String screenshotName = testMethod + dateFormat.format(date) + ".png";
+		       System.out.println("See screenshotName:" + screenshotName);
+	           File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	        //The below method will save the screen shot in d drive with name "screenshot.png"
+	           FileUtils.copyFile(scrFile, new File(screenshotName));
+	           System.out.println("Screenshot is taken.");
+	   }
+	
+	//Convert http://www.z100.com  to http://m.z100.com
+	public String convertToMobileURL(String href)
+	{   String mhref = href;
+			
+	     String part1 = href.split(":")[0]; //http or https:
+	     String part2 = href.split(":")[1];
+	     part2 = part2.replace("www.", "m.");
+	     mhref = part1 + ":" + part2; 
+		
+		
+		System.out.println("convert to mobile site:" + mhref);
+		return mhref;
+	}
+	
+	
+	
+	
+	//M.Z100.COM  --> z100.com
+	public String getDomainName(String url)
+	{   
+	     String part1 = url.split(":")[0]; //http or https:
+	     String part2 = url.split(":")[1];
+	     part2 = part2.substring(4);
+	    
+		System.out.println("domain:" +  part2);
+		return part2;
+	}
+	
+	
 }
