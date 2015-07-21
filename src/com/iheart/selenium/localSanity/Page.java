@@ -162,7 +162,7 @@ public abstract class Page {
 				    }	
 					
 					System.out.println("HREF/STATUS:" + href + "-----" + linkText + "-------" +  statusCode );
-					badLinks.add(new BadLink(linkText, href , statusCode));
+				     badLinks.add(new BadLink(linkText, href , statusCode));
 				}
 			}		
 			
@@ -172,10 +172,33 @@ public abstract class Page {
         //output bad link to a file 
         
         System.out.println("Bad links/statusCode:");
-        for (BadLink link: badLinks)
-        	System.out.println(link.getUrl() + "------" + link.getStatusCode());
         
-        ExcelUtility.writeToExcel(badLinks);
+        List<BadLink> cleanOne = new ArrayList<BadLink>();
+        for (BadLink link: badLinks)
+        {	System.out.println(link.getUrl() + "------" + link.getStatusCode());
+            //Filter out forwarded links
+    	    if (!isForwardLink(link.getUrl()))
+    	        cleanOne.add(link);
+        }
+        
+       
+        
+       // if (badLinks.size() > 0)
+        
+        if (cleanOne.size() > 0)
+            ExcelUtility.writeToExcel(cleanOne);
+	}
+	
+	
+	private boolean isForwardLink(String _href)
+	{  System.out.println("isForwardLink?:" + _href);
+		
+		driver.get(_href);
+		WaitUtility.sleep(1000);
+		//System.out.println("isForwardLink?SEE PAGE:" + driver.getPageSource());
+		if (driver.getPageSource().contains("Continue to Page"))
+			return true;
+		else return false;
 	}
 	
 	private boolean isSocial(String url)
@@ -194,7 +217,7 @@ public abstract class Page {
 		return url.contains("tel:") || url.contains("sms:") ;
 	}
 	
-	private int getResponseCode(String urlString) throws MalformedURLException, IOException {         
+	public int getResponseCode(String urlString) throws MalformedURLException, IOException {         
 	    URL u = new URL(urlString);  
 	   
 	    HttpURLConnection huc = (HttpURLConnection) u.openConnection();  
@@ -203,6 +226,8 @@ public abstract class Page {
 	    System.out.println("response:" + huc.getResponseCode());
 	    return huc.getResponseCode();  
 	}
+	
+	/*
 	
 	private int getSSLResponseCode(String urlString) throws MalformedURLException, IOException {         
 	    URL u = new URL(urlString);  
@@ -232,6 +257,7 @@ public abstract class Page {
 	    System.out.println("response:" +  responseCode );
 	    return huc.getResponseCode();  
 	}
+	*/
 	
 	private int getResponseCodeViaHttpClient(String href) throws MalformedURLException, IOException 
 	{         
