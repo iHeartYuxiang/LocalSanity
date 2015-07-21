@@ -133,7 +133,7 @@ public abstract class Page {
         		
         	}
         	
-			if (href != null && !href.equals("") && !isAdLink(href) &&
+			if (href != null && !href.equals("") && !isAdLink(href) && !isMailLink(href) &&
 			     !isSocial(href) && !isVoid(href)  && !isMobileNative(href) && !isJavaScriptAlert(href))
 			{	
 				
@@ -323,6 +323,11 @@ public abstract class Page {
 	private boolean isAdLink(String url)
 	{
 		return url.contains("googleads.g.doubleclick.net");
+	}
+	
+	private boolean isMailLink(String url)
+	{
+		return url.startsWith("mailto");
 	}
 	
 	private boolean isJavaScriptAlert(String url)
