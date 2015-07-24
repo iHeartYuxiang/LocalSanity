@@ -129,7 +129,10 @@ public class Header extends Page{
 		
 		
 		String trackInWidget = driver.findElement(By.id("title")).getText();
+		if (trackInWidget == null || trackInWidget.length() < 1)
+			trackInWidget = driver.findElement(By.id("title")).getText();
 		String artistInWidget = driver.findElement(By.id("artist")).getText();
+	
 		
 		System.out.println("Now playing in mobile:" + trackInWidget + " by " + artistInWidget);
 		

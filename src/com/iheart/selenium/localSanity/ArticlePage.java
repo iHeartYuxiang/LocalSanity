@@ -154,7 +154,8 @@ public class ArticlePage extends Page {
 		     System.out.println("SEE moduleContainer:" + driver.findElement(By.id("fbcomments")).getText());
 		}catch(Exception e)
 		{
-			errors.append("Comment section is missing.");
+			//errors.append("Comment section is missing.");
+			handleError("Comment section is missing.", "checkRecommendedAndAd");;
 			return;
 		}
 		if (!driver.findElement(By.id("fbcomments")).getText().contains("Comments"))
@@ -176,7 +177,10 @@ public class ArticlePage extends Page {
 				errors.append("No ad is displayed in Top LetterHead.");
 		}
 		*/
+		
+		
 		try{
+			
 			if (!driver.findElement(By.className("GoogleActiveViewClass")).isDisplayed())
 				errors.append("No ad is displayed in Top LetterHead.");
 		}catch(Exception e)

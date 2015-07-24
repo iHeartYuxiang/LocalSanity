@@ -121,21 +121,7 @@ public class Utils {
 	  }
 	
 	
-	   
-	   
-	   public static void takeScreenshot(WebDriver driver, String testMethod) throws Exception 
-	   {      
-		        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
-	   			Date date = new Date();
-	   			//System.out.println(dateFormat.format(date)); //2014/08/06 15:59:48
-		       String screenshotName = testMethod + dateFormat.format(date) + ".png";
-		       System.out.println("See screenshotName:" + screenshotName);
-	           File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	        //The below method will save the screen shot in d drive with name "screenshot.png"
-	           FileUtils.copyFile(scrFile, new File(screenshotName));
-	           System.out.println("Screenshot is taken.");
-	   }
-	   
+	 
 	
 	
 	public static void waitForPageToLoad(WebDriver driver) {

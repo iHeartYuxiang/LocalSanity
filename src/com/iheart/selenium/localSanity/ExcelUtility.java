@@ -19,6 +19,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.io.File;
+
+import jxl.*; 
 
 public class ExcelUtility {
 	
@@ -112,41 +115,92 @@ public class ExcelUtility {
 			}
 	    }
 
-
-	    public static void writeToExcel_bad(List<BadLink> brokenLinkList){
-
-	        // Using XSSF for xlsx format, for xls use HSSF
-	        Workbook workbook = new XSSFWorkbook();
-
-	        Sheet linkSheet = workbook.createSheet("BrokenLinks");
-
-	        int rowIndex = 0;
-	        for(BadLink link : brokenLinkList)
-	        {
-	            Row row = linkSheet.createRow(rowIndex++);
-	            int cellIndex = 0;
-	            //first place in row is url
-	            row.createCell(cellIndex++).setCellValue(link.getUrl());
-
-	            //second place in row is status code
-	           row.createCell(cellIndex++).setCellValue(link.getStatusCode());
-	        }//FOR()
-
-	        //write this workbook in excel file.
-	        try {
-	            FileOutputStream fos = new FileOutputStream(FILE_PATH);
-	            workbook.write(fos);
-	            fos.close();
-
-	            System.out.println(FILE_PATH + " is successfully written");
-	        } catch (FileNotFoundException e) {
-	            e.printStackTrace();
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-
-
-	    }
+        //APPEND RESULT AT THE END OF FILE
+	    /*
+	    public static void writeToExcel( List<BadLink> brokenLinkList, String fileName)
+	    {   //Don't create anything if no bad links
+	    	if (brokenLinkList == null || brokenLinkList.size() < 1)  return; 
+	    	
+	    	Workbook workbook = Workbook.getWorkbook(new File(fileName));
+	    	WritableWorkbook copy = Workbook.createWorkbook(new File("output.xls"), workbook);
+	    	WritableSheet sheet2 = copy.getSheet(1); 
+	    	Label label = new Label(5,2,"ssssssssss"); 
+	    	sheet2.addCell(label); 
+	    	
+	    	
+	    	
+	    	try {
+	    	    
+				FileOutputStream fileOut = new FileOutputStream(fileName);
+				HSSFWorkbook workbook = new HSSFWorkbook();
+				HSSFSheet worksheet = workbook.createSheet("POI Worksheet");
+				
+				HSSFRow row = worksheet.createRow((short) 0);
+				
+				HSSFCell cellA1 = row.createCell((short) 0);
+				
+				
+				HSSFCellStyle cellStyle = workbook.createCellStyle();
+				cellStyle.setFillForegroundColor(HSSFColor.BLUE.index);
+			//	cellStyle.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+				cellA1.setCellStyle(cellStyle);
+				
+				
+				int rowCount = brokenLinkList.size();
+				if (rowCount < 1)
+					cellA1.setCellValue("Check:" + Page.getURL() + ": WOW WOW WOW! All good! Nothing is broken!");
+				else
+				{	cellA1.setCellValue("Check:" + Page.getURL());
+				
+				
+				    // MAKE SOME TITLE
+					row = worksheet.createRow((short) (1));
+					
+					cellA1 = row.createCell((short) 0);
+					cellA1.setCellValue("Bad Link URL");
+		
+					HSSFCell cellB1 = row.createCell((short) 1);
+					cellB1.setCellValue("Link Text or Image Source");
+					
+					HSSFCell cellC1 = row.createCell((short) 2);
+					cellC1.setCellValue("Status Code");
+					
+					cellA1.setCellStyle(cellStyle);
+					cellB1.setCellStyle(cellStyle);
+					cellC1.setCellStyle(cellStyle);
+				
+				}
 	
+				
+				
+				for (int i = 0 ; i < rowCount; i++)
+				{	
+					// index from 0,0... cell A1 is cell(0,0)
+					
+					row = worksheet.createRow((short) (i+2));
+		
+					cellA1 = row.createCell((short) 0);
+					cellA1.setCellValue(brokenLinkList.get(i).getUrl());
+		
+					HSSFCell cellB1 = row.createCell((short) 1);
+					cellB1.setCellValue(brokenLinkList.get(i).getLinkText());
+					
+					HSSFCell cellC1 = row.createCell((short) 2);
+					cellC1.setCellValue(brokenLinkList.get(i).getStatusCode());
+					
+				}	
+	
+	
+				workbook.write(fileOut);
+				fileOut.flush();
+				fileOut.close();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+	    }
+
+*/
 	
 }
