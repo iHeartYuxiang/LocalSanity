@@ -117,6 +117,7 @@ public class Header extends Page{
 	
 	public void AL_491_NowPlayingBar_Mobile()
 	{   //
+		WaitUtility.sleep(2000);
 		if (!isHeaderPlaying())
 		{
 			System.out.println("No song is playing. Do nothing.");
@@ -173,21 +174,24 @@ public class Header extends Page{
 	}
 	
 	private  boolean isHeaderPlaying()
-	{   WaitUtility.sleep(1500);
+	{   System.out.println("url:" + Page.getURL());
+		WaitUtility.sleep(3000);
 	    String trackInWidget = "";
 		try{
 			if (isMobileSite(Page.getURL()))
 				trackInWidget = driver.findElement(By.id("title")).getText();
 			else
-				trackInWidget = driver.findElement(By.className("trackInfo")).findElements(By.tagName("a")).get(0).getText();
-		    System.out.println("IsPLAING:" + trackInWidget);
+				//trackInWidget = driver.findElement(By.className("trackInfo")).findElements(By.tagName("a")).get(0).getText();
+				trackInWidget = driver.findElement(By.className("trackInfo")).getText();
+			  
+				System.out.println("IsPlaying:" + trackInWidget);
 		    if (trackInWidget.contains("#1 Hit Music Station") || trackInWidget.startsWith("Z100") || trackInWidget.startsWith("z100"))
 				return false;
 			else 
 				return true;
 			
 		}catch(Exception e)
-		{
+		{    e.printStackTrace();
 	          return false;
 		}
 		   
