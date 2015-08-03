@@ -25,8 +25,7 @@ public class RunHeadful {
 		
 		
 		String browser = "firefox";
-	    //String browser = "chrome";
-		
+	   
 		static String userCity = "";
 		
 		 
