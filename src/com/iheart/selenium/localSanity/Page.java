@@ -99,7 +99,8 @@ public abstract class Page {
    
 	
 	public void goThroughLinks() throws Exception
-	{  
+	{  //First, printout page url
+		System.out.println(Page.getURL());
 		String href ="";
     	String linkText ="";//if it is an image, put image src here
     	
@@ -112,7 +113,8 @@ public abstract class Page {
 		List<WebElement> links = driver.findElements(By.tagName("a"));  
 		System.out.println("Total links: " + links.size());
 		
-				
+		int linkCount_good  = 0; 
+		int retryCount = 0; 
         for (WebElement link: links)
         {   href ="";
             linkText ="";
@@ -126,10 +128,15 @@ public abstract class Page {
         			
         			
         		linkText = link.getText();
-        		
+        		linkCount_good++;
         	}catch(Exception e)
-        	{
+        	{ //  e.printStackTrace();
         		System.out.println("Null href!");
+        	    if (retryCount <2)
+        	    {
+        	    	links = driver.findElements(By.tagName("a"));  
+        	    	retryCount++;
+        	    }
         		
         	}
         	

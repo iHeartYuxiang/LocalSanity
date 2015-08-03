@@ -1,5 +1,7 @@
 package com.iheart.selenium.localSanity;
 
+
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
@@ -13,6 +15,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileNotFoundException;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -20,12 +23,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.io.File;
+import java.util.Iterator;
 
-import jxl.*; 
+//import jxl.*; 
 
 public class ExcelUtility {
 	
+		private static final String SITE_LIST_FILE = "C:\\Users\\1111128\\workspace\\LocalSanity\\siteList.xlsx";
 	    private static final String FILE_PATH = "C:\\Users\\1111128\\workspace\\LocalSanity\\EXCEL";
+	    
 	    //We are making use of a single instance to prevent multiple write access to same file.
 	    private static final ExcelUtility INSTANCE = new ExcelUtility();
 
@@ -36,6 +42,54 @@ public class ExcelUtility {
 	    private ExcelUtility() {
 	    }
 
+	    public static List getSiteListFromExcel() {
+	        List<String> siteList = new ArrayList<String>();
+	        FileInputStream fis = null;
+	        try {
+	            fis = new FileInputStream(SITE_LIST_FILE);
+
+	            // Using XSSF for xlsx format, for xls use HSSF
+	            Workbook workbook = new XSSFWorkbook(fis);
+
+	            int numberOfSheets = workbook.getNumberOfSheets();
+
+	            //looping over each workbook sheet
+	            for (int i = 0; i < numberOfSheets; i++) {
+	                Sheet sheet = workbook.getSheetAt(i);
+	                Iterator rowIterator = sheet.iterator();
+
+	                //iterating over each row
+	                while (rowIterator.hasNext()) {
+
+	                   
+	                    Row row = (Row) rowIterator.next();
+	                    Iterator cellIterator = row.cellIterator();
+
+	                    //Iterating over each cell (column wise)  in a particular row.
+	                    while (cellIterator.hasNext()) {
+
+	                        Cell cell = (Cell)cellIterator.next();
+	                        //end iterating a row, add all the elements of a row in list
+	                        siteList.add(cell.getStringCellValue());
+	                    }
+	                }   
+	            }
+	                
+
+	            fis.close();
+
+	        } catch (FileNotFoundException e) {
+	            e.printStackTrace();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	        
+	        for (String site: siteList)
+	        	System.out.println("Read in site:" + site);
+	        
+	        return siteList;
+	    }
+	    
 	    public static void writeToExcel( List<BadLink> brokenLinkList)
 	    {  
 	    	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");

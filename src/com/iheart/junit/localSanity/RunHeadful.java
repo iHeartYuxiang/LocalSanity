@@ -24,8 +24,8 @@ public class RunHeadful {
 	 Header header;
 		
 		
-		//String browser = "firefox";
-	    String browser = "chrome";
+	String browser = "firefox";
+	 //   String browser = "chrome";
 		
 		static String userCity = "";
 		
@@ -164,7 +164,7 @@ public class RunHeadful {
 		 
 	    @After
 	    public void tearDown() throws Exception{
-	    	//driver.quit(); 
+	    	driver.quit(); 
 	    	if (Page.getErrors().length() > 0)
 				 fail(Page.getErrors().toString());
 	    	
@@ -174,7 +174,7 @@ public class RunHeadful {
 	    {   Page.getErrors().append("Exception is thrown.");
 	        e.printStackTrace();
             try{
-	    	   Utils.takeScreenshot(driver, name.getMethodName());
+	    	   Page.takeScreenshot(driver, name.getMethodName());
             }catch(Exception eX)
             {
             	

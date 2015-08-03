@@ -3,13 +3,15 @@ package com.iheart.headless.localSanity;
 
 import static org.junit.Assert.fail;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.ArrayList;
+import java.util.List;
 
 
 
-
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -28,11 +30,12 @@ import org.openqa.selenium.support.PageFactory;
 
 
 
-
 import com.iheart.selenium.localSanity.ArticlePage;
+import com.iheart.selenium.localSanity.ExcelUtility;
 import com.iheart.selenium.localSanity.Header;
 import com.iheart.selenium.localSanity.Page;
 import com.iheart.selenium.localSanity.Utils;
+import com.iheart.selenium.localSanity.WaitUtility;
 import com.iheart.selenium.localSanity.Z100HomePage;
 
 
@@ -44,34 +47,37 @@ public class RunHeadless {
 @Parameters
 public static Collection<Object[]> data() {
 
-	
+	List<String>  siteList = ExcelUtility.getSiteListFromExcel();
 	
 	Collection<Object[]> params = new ArrayList<>(100);
+	for (String site: siteList)
+		params.add(new Object[] {  site});
 
-	//params.add(new Object[] {  "http://www.z100.com"});
-      params.add(new Object[] {  "http://www.y100.com"});
-      params.add(new Object[] {  "http://www.radio1057.com"});
-    //params.add(new Object[] {  "http://m.933flz.com"});
+	 // params.add(new Object[] {  "http://news.iheart.com/legal/privacy/"});
+	 //  params.add(new Object[] { "http://www.iheart.com/live/country/US/?genreId=8"});
+	//   params.add(new Object[] { "http://m.cantonsnewcountry.com"});
+	//   params.add(new Object[] { "http://m.my1017.com"});
+   //   params.add(new Object[] {  "http://www.y100.com"});
+     // params.add(new Object[] {  "http://www.radio1057.com"});
+ //     params.add(new Object[] {  "http://m.933flz.com"});
     // params.add(new Object[] {  "http://www.933flz.com"});
-   //  params.add(new Object[] {  "http://www.Z100.com"});
+   //  params.add(new Object[] {  "http://www.rushlimbaugh.com"});
     
-    // params.add(new Object[] {  "http://mike.iheartmedia.com"});
-     //params.add(new Object[] {  "http://m.mike.iheartmedia.com"});
+   // params.add(new Object[] {  "http://mike.iheartmedia.com"});
+   // params.add(new Object[] {  "http://m.mike.iheartmedia.com"});
      
     return params;
 }
 protected static DesiredCapabilities dCaps;
 
 	private final String url;
-	
+	static String resultFileName ="";
 	WebDriver driver;
 	
 	Z100HomePage homePage;
 	 ArticlePage articlePage;
 	 Header header;	
 		
-	//String browser = "firefox";
- //  String browser = "chrome";
 	
 	
 	
@@ -83,6 +89,16 @@ protected static DesiredCapabilities dCaps;
 	@Rule public TestName name = new TestName();
 	
 
+	@Before
+	public void createResultFile() throws Exception {
+		//So that we can put all the result in one single excel file
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+		Date date = new Date();
+			//System.out.println(dateFormat.format(date)); //2014/08/06 15:59:48
+        resultFileName = "BadLinks_" +  dateFormat.format(date) + ".xls";
+	}
+	
+	
 	///* run headless
 	@Before
 	public void setUp() throws Exception {
@@ -100,7 +116,7 @@ protected static DesiredCapabilities dCaps;
 		driver = new PhantomJSDriver(dCaps);
 		driver.get(url + "/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+		WaitUtility.sleep(2000);
 		 Page.setDriver (driver);
 	     homePage = PageFactory.initElements(driver, Z100HomePage.class);
 	     articlePage = PageFactory.initElements(driver, ArticlePage.class);
@@ -109,7 +125,7 @@ protected static DesiredCapabilities dCaps;
 	      Page.getErrors().delete(0, Page.getErrors().length());
 	}
 	
-	
+	/*
 	
 	 @Test
 	 public void test_AL_498_nowPlayingWidegt() throws Exception
@@ -224,22 +240,23 @@ protected static DesiredCapabilities dCaps;
 	 	}  	
 	 	System.out.println(name.getMethodName() + " is Done.");
 	 }
- 
+ */
 	
-	/*
+	
 	@Test
 	 public void testBadLinks() throws Exception
 	 {   
 	 	System.out.println("test method:" +  name.getMethodName() );
 	 	try{
 	 		homePage.goThroughLinks();
+	 		//homePage.getResponseCode("http://m.933flz.com/go/YourAdHere?desktop=true&desktopviewduration=86400");
 	 	}catch(Exception e)
 	 	{
 	 		handleException(e);
 	 	}  	
 	 	System.out.println(name.getMethodName() + " is Done.");
 	 }
-    */
+  
   
 	 @After
 	    public void tearDown() throws Exception{
@@ -252,6 +269,12 @@ protected static DesiredCapabilities dCaps;
 	    private void handleException(Exception e)
 	    {   Page.getErrors().append("Exception is thrown.");
 	        e.printStackTrace();
+	        try{
+	    	   Page.takeScreenshot(driver, name.getMethodName());
+            }catch(Exception eX)
+            {
+            	eX.printStackTrace();
+            }
 	    }
 	    
 	   

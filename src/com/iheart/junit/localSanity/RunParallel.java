@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -29,10 +30,14 @@ import org.openqa.selenium.support.PageFactory;
 
 
 
+
+
 import com.iheart.selenium.localSanity.ArticlePage;
+import com.iheart.selenium.localSanity.ExcelUtility;
 import com.iheart.selenium.localSanity.Header;
 import com.iheart.selenium.localSanity.Page;
 import com.iheart.selenium.localSanity.Utils;
+import com.iheart.selenium.localSanity.WaitUtility;
 import com.iheart.selenium.localSanity.Z100HomePage;
 
 
@@ -44,19 +49,17 @@ public class RunParallel {
 @Parameters
 public static Collection<Object[]> data() {
 
-	/*
-return Arrays.asList(new Object[]
-		{"http://www.y100.com"} ,
-		{"http://www.933flz.com"},
-		{"http://www.Z100.com"}
-		);
-*/
+	List<String>  siteList = ExcelUtility.getSiteListFromExcel();
 	
 	Collection<Object[]> params = new ArrayList<>(100);
+	for (String site: siteList)
+		params.add(new Object[] {  site});
 
-	//params.add(new Object[] {  "http://www.z100.com"});
-      params.add(new Object[] {  "http://www.y100.com"});
-      params.add(new Object[] {  "http://www.radio1057.com"});
+	// params.add(new Object[] {  "http://m.640whlo.com"});
+    params.add(new Object[] {  "http://www.hannity.com"});
+	// params.add(new Object[] {  "http://m.my1017.com"});
+    //  params.add(new Object[] {  "http://www.y100.com"});
+    //  params.add(new Object[] {  "http://www.radio1057.com"});
     //params.add(new Object[] {  "http://m.933flz.com"});
     // params.add(new Object[] {  "http://www.933flz.com"});
    //  params.add(new Object[] {  "http://www.Z100.com"});
@@ -76,8 +79,8 @@ protected static DesiredCapabilities dCaps;
 	 ArticlePage articlePage;
 	 Header header;	
 		
-	String browser = "firefox";
-   //String browser = "chrome";
+	//String browser = "firefox";
+   String browser = "chrome";
 	
 	
 	
@@ -121,6 +124,9 @@ protected static DesiredCapabilities dCaps;
        driver = Utils.launchBrowser(url, browser);
       	Page.setURL(url);
        Page.setDriver (driver);
+       
+       WaitUtility.sleep(2000);
+       
        homePage = PageFactory.initElements(driver, Z100HomePage.class);
        
        articlePage = PageFactory.initElements(driver, ArticlePage.class);
@@ -129,7 +135,7 @@ protected static DesiredCapabilities dCaps;
        Page.getErrors().delete(0, Page.getErrors().length());
    }
 
-	
+	/*
 	 @Test
 	 public void test_AL_498_nowPlayingWidegt() throws Exception
 	 {   
@@ -244,7 +250,7 @@ protected static DesiredCapabilities dCaps;
 	 	System.out.println(name.getMethodName() + " is Done.");
 	 }
  
-	/*
+	*/
 	
 	@Test
 	 public void testBadLinks() throws Exception
@@ -258,7 +264,7 @@ protected static DesiredCapabilities dCaps;
 	 	}  	
 	 	System.out.println(name.getMethodName() + " is Done.");
 	 }
-    */
+    
   
 	 @After
 	    public void tearDown() throws Exception{
