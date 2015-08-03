@@ -24,8 +24,8 @@ public class RunHeadful {
 	 Header header;
 		
 		
-		//String browser = "firefox";
-	    String browser = "chrome";
+		String browser = "firefox";
+	    //String browser = "chrome";
 		
 		static String userCity = "";
 		
@@ -38,7 +38,10 @@ public class RunHeadful {
 		@Before
 	    public void init() {
 	        driver = Utils.launchBrowser(URL, browser);
+	        Page.setURL(URL);
 	        Page.setDriver (driver);
+	        WaitUtility.sleep(2000);//Wait for page to load
+	        
 	        homePage = PageFactory.initElements(driver, Z100HomePage.class);
 	        articlePage = PageFactory.initElements(driver, ArticlePage.class);
 	        header = PageFactory.initElements(driver, Header.class);
@@ -164,7 +167,7 @@ public class RunHeadful {
 		 
 	    @After
 	    public void tearDown() throws Exception{
-	    	//driver.quit(); 
+	    	driver.quit(); 
 	    	if (Page.getErrors().length() > 0)
 				 fail(Page.getErrors().toString());
 	    	
