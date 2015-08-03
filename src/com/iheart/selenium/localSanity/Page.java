@@ -316,7 +316,7 @@ public abstract class Page {
 	
 	
 	public boolean isMobileSite(String url)
-	{
+	{   
 		return url.startsWith("http://m.") || url.startsWith("https://m.");
 	}
 	
