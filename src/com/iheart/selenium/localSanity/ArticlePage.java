@@ -166,16 +166,7 @@ public class ArticlePage extends Page {
 		
 		//Check Ad
 		
-		/*  This is for home page
-		try{
-			if (!masthead_topad.findElement(By.tagName("div")).isDisplayed())
-				errors.append("No ad is displayed in Top LetterHead.");
-		}catch(Exception e)
-		{
-			if (!masthead_topad.findElement(By.tagName("a")).isDisplayed())
-				errors.append("No ad is displayed in Top LetterHead.");
-		}
-		*/
+		
 		try{
 			if (!driver.findElement(By.className("GoogleActiveViewClass")).isDisplayed())
 				errors.append("No ad is displayed in Top LetterHead.");
@@ -351,10 +342,23 @@ public class ArticlePage extends Page {
 				}
 			}
 			
+			boolean adInFooter= false;
+			//Check: Is there any image in the footer?
+			if (adURL.length() < 1)
+			{	
+				try{
+					
+					adInFooter = driver.findElement(By.className("footer")).findElements(By.tagName("img")).size()> 0;
+				}catch(Exception e)
+				{
+					
+				}	
+			
+			}
 
-			System.out.println("adURL: " + adURL);
+			//System.out.println("adURL: " + adURL);
     		
-			if (adURL.length() < 4)
+			if (adURL.length() < 4 && !adInFooter)
 			{	errors.append("No ad is displayed in the bottom Leader Board.");
 				
 			}
