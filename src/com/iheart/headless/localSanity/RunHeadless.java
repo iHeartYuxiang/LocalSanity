@@ -90,10 +90,12 @@ protected static DesiredCapabilities dCaps;
 		Page.setURL(url);
 		
 		
-		// System.setProperty("phantomjs.binary.path", "C:\\Users\\1111128\\workspace\\lib\\phantomjs-2.0.0-windows\\bin\\phantomjs.exe");
+	   // System.setProperty("phantomjs.binary.path", "C:\\Users\\1111128\\workspace\\lib\\phantomjs-2.0.0-windows\\bin\\phantomjs.exe");
+		System.setProperty("phantomjs.binary.path", "/Users/1111128/git/lib/phantomjs-2.0.0-macosx/bin/phantomjs");
+		
 		dCaps = new DesiredCapabilities();
 		dCaps.setBrowserName("firefox");
-		dCaps.setVersion("38");
+		dCaps.setVersion("39");
 		dCaps.setJavascriptEnabled(true);
 		dCaps.setCapability("takesScreenshot", true);
 		
@@ -225,8 +227,8 @@ protected static DesiredCapabilities dCaps;
 	 	System.out.println(name.getMethodName() + " is Done.");
 	 }
  
-	
 	/*
+	
 	@Test
 	 public void testBadLinks() throws Exception
 	 {   
