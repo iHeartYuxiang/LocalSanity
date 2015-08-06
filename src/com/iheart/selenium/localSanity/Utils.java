@@ -57,8 +57,8 @@ public class Utils {
 	    else if (browser.equalsIgnoreCase("chrome"))
 	    {   //Set actual path to the driver file
 	
-	      System.setProperty("webdriver.chrome.driver", "C:\\Users\\1111128\\workspace\\drivers\\chromedriver.exe");
-	   //   System.setProperty("webdriver.chrome.driver", "/Users/1111128/Documents/workspace/drivers/chromedriver.exe");	
+	      //System.setProperty("webdriver.chrome.driver", "C:\\Users\\1111128\\workspace\\drivers\\chromedriver.exe");
+	      System.setProperty("webdriver.chrome.driver", "/Users/1111128/Documents/workspace/drivers/chromedriver");	
 	
 	      ChromeOptions options = new ChromeOptions();
 	      options.addArguments("test-type");

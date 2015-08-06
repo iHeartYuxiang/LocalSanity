@@ -39,7 +39,7 @@ import com.iheart.selenium.localSanity.Z100HomePage;
 
 @RunWith(Parameterized.class)
 
-public class RunHeadless {
+public class CheckBadLinks {
 
 @Parameters
 public static Collection<Object[]> data() {
@@ -75,7 +75,7 @@ protected static DesiredCapabilities dCaps;
 	
 	
 	
-	public RunHeadless(String url) {
+	public CheckBadLinks(String url) {
 		this.url = url;
 	
 	}
@@ -111,123 +111,6 @@ protected static DesiredCapabilities dCaps;
 	      Page.getErrors().delete(0, Page.getErrors().length());
 	}
 	
-	/*
-	
-	 @Test
-	 public void test_AL_498_nowPlayingWidegt() throws Exception
-	 {   
-	 	System.out.println("test method:" +  name.getMethodName() );
-	 	try{
-	 		header.AL_498_nowPlayingWidegt();
-	 	}catch(Exception e)
-	 	{
-	 		handleException(e);
-	 	}  	
-	 	System.out.println(name.getMethodName() + " is Done.");
-	 }
-	 
-	 @Test
-	 public void test_AL_543_articleDetail() throws Exception
-	 {   
-	 	System.out.println("test method:" +  name.getMethodName() );
-	 	try{
-	 		articlePage.AL_543_articleDetail();
-	 	}catch(Exception e)
-	 	{
-	 		handleException(e);
-	 	}  	
-	 	System.out.println(name.getMethodName() + " is Done.");
-	 }
-	 
-	
-	 @Test
-	 public void testAL_485_listenLive() throws Exception
-	 {   
-	 	System.out.println("test method:" +  name.getMethodName() );
-	 	try{
-	 		homePage.testAL_485_listenLive();
-	 	}catch(Exception e)
-	 	{
-	 		handleException(e);
-	 	}  	
-	 	System.out.println(name.getMethodName() + " is Done.");
-	 }
-	
-	 
-	 @Test
-	 public void test_AL_490_NowPlayingBar_DeskTop() throws Exception
-	 {   
-	 	System.out.println("test method:" +  name.getMethodName() );
-	 	try{
-	 		header.AL_490_NowPlayingBar_DeskTop();
-	 	}catch(Exception e)
-	 	{
-	 		handleException(e);
-	 	}  	
-	 	System.out.println(name.getMethodName() + " is Done.");
-	 }
-	 
-	 
-	 @Test
-	 public void test_AL_491_NowPlayingBar_Mobile() throws Exception
-	 {   
-	 	System.out.println("test method:" +  name.getMethodName() );
-	 	try{
-	 		//METHOD IS NOT IMPLEMENTED IT
-	 		header.AL_491_NowPlayingBar_Mobile();
-	 	}catch(Exception e)
-	 	{
-	 		handleException(e);
-	 	}  	
-	 	System.out.println(name.getMethodName() + " is Done.");
-	 }
-	 
-	 
-	 
-	 
-	 @Test
-	 public void test_AL_534_eyesToEars() throws Exception
-	 {   
-	 	System.out.println("test method:" +  name.getMethodName() );
-	 	try{
-	 		articlePage.AL_534_eyesToEars();
-	 	}catch(Exception e)
-	 	{
-	 		handleException(e);
-	 	}  	
-	 	System.out.println(name.getMethodName() + " is Done.");
-	 }
- 
-	
-	 
-	 @Test
-	 public void test_AL_544_BlogDetails() throws Exception
-	 {   
-	 	System.out.println("test method:" +  name.getMethodName() );
-	 	try{
-	 		articlePage.AL_544_BlogDetails();
-	 	}catch(Exception e)
-	 	{
-	 		handleException(e);
-	 	}  	
-	 	System.out.println(name.getMethodName() + " is Done.");
-	 }
- 
-	
-	 @Test
-	 public void test_AL_547_URLredirect() throws Exception
-	 {   
-	 	System.out.println("test method:" +  name.getMethodName() );
-	 	try{
-	 		articlePage.AL_547_URLredirect();
-	 	}catch(Exception e)
-	 	{
-	 		handleException(e);
-	 	}  	
-	 	System.out.println(name.getMethodName() + " is Done.");
-	 }
- 
-	*/
 	
 	@Test
 	 public void testBadLinks() throws Exception

@@ -24,10 +24,9 @@ public class RunHeadful {
 	 Header header;
 		
 		
-		String browser = "firefox";
+	String browser = "firefox";
+	 //String browser = "chrome";
 	   
-		static String userCity = "";
-		
 		 
 		final String URL = "http://www.y100.com";
 		
