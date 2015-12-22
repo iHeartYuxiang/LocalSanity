@@ -17,7 +17,8 @@ import java.util.List;
 
 public class Z100HomePage extends Page {
 	
-	@FindBy(css="body > div.pageWrapper > div.nowPlayingWrapper.full > div > a > span.cta > span:nth-child(1)")
+	//@FindBy(css="body > div.pageWrapper > div.nowPlayingWrapper.full > div > a > span.cta > span:nth-child(1)")
+	@FindBy(css="div.small-8 > span:nth-child(1)")
 		private WebElement listenLive;
 	
 	 public Z100HomePage() {

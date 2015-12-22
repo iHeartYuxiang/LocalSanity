@@ -30,6 +30,8 @@ public class ArticlePage extends Page {
 	@FindBy(id="ihrnp_track") private WebElement ihrnp_track;
 	@FindBy(id="ihrnp_artist") private WebElement ihrnp_artist;
 	
+	@FindBy(css="a.filter-option:nth-child(2)") private WebElement blogLink;
+	
 	@FindBy(css="#outbrainRecommendedStories > div.moduleContainer > div > div.moduleSubTitle") 
 	 	private WebElement recommended;
 	@FindBy(css="#outbrain_widget_0 > div > div.ob_container") private WebElement obContainer;
@@ -220,8 +222,14 @@ public class ArticlePage extends Page {
 	
 	private void clickFirstBlog()
 	{
-		driver.findElement(By.xpath("//*[@id='homepageFeed']/div[3]/div[3]/div[1]/a[2]")).click();
+		
+		//a.filter-option:nth-child(2)
+	//	driver.findElement(By.xpath("//*[@id='homepageFeed']/div[3]/div[3]/div[1]/a[2]")).click();
+		blogLink.click();
 		WaitUtility.sleep(1500);
+		
+		driver.findElement(By.cssSelector("section.article-single:nth-child(1) > div:nth-child(2) > figure:nth-child(1) > figcaption:nth-child(2) > a:nth-child(4)")).click();
+		/*
 		List<WebElement> feedItems = driver.findElement(By.id("feedItems")).findElements(By.tagName("a"));
 		
 		for (WebElement item: feedItems)
@@ -229,6 +237,7 @@ public class ArticlePage extends Page {
 			item.click();
 			break;
 		}
+		*/
 	}
 	
 	private void clickOnPhotoGallery()
@@ -259,7 +268,10 @@ public class ArticlePage extends Page {
 	//to be implemented
 	private int recommendedStoryCount()
 	{  int count = 0;
-	   count =  driver.findElement(By.className("OUTBRAIN")).findElement(By.className("ob_container_recs")).findElements(By.tagName("a")).size();
+	  // count =  driver.findElement(By.className("OUTBRAIN")).findElement(By.className("ob_container_recs")).findElements(By.tagName("a")).size();
+		count =  driver.findElement(By.id("outbrainRecommendedStories")).findElements(By.className("ob-dynamic-rec-container")).size();
+	    
+	
 	   System.out.println("Recommended story count: " + count);
 	   return count;
 	}
