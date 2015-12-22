@@ -1,4 +1,4 @@
-package com.iheart.selenium.localSanity;
+package com.iheart.brokenLink;
 
 public class BadLink {
 	String linkText;

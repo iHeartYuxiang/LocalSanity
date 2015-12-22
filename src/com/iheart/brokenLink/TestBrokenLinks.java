@@ -1,5 +1,4 @@
-package com.iheart.headless.localSanity;
-
+package com.iheart.brokenLink;
 
 import static org.junit.Assert.fail;
 
@@ -7,7 +6,11 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.ArrayList;
 
+import java.util.Calendar;
+import java.util.Date;
 
+import java.util.List;
+import java.util.ArrayList;
 
 
 import java.util.concurrent.TimeUnit;
@@ -24,58 +27,42 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
-
-
-
-
-
-import com.iheart.selenium.localSanity.ArticlePage;
-import com.iheart.selenium.localSanity.Header;
-import com.iheart.selenium.localSanity.Page;
 import com.iheart.selenium.localSanity.Utils;
-import com.iheart.selenium.localSanity.Z100HomePage;
-
-
 
 @RunWith(Parameterized.class)
 
-public class CheckBadLinks {
+public class TestBrokenLinks {
 
-@Parameters
-public static Collection<Object[]> data() {
+	@Parameters
+	public static Collection<Object[]> data() {
 
-	
-	
-	Collection<Object[]> params = new ArrayList<>(100);
+		//What day is it today?
+		int day = dayOfWeekToday();
+		
+		List<String>  siteList= ExcelUtility.readSiteList("desktop.txt");
+		
+		
+		Collection<Object[]> params = new ArrayList<>(100);
+		int i = 0; 
+		for (String site:siteList)
+		params.add(new Object[] {site });
+		//params.add(new Object[] {  "http://www.z100.com"});
+	   
+	     
+	    return params;
+	}
 
-	//params.add(new Object[] {  "http://www.z100.com"});
-      params.add(new Object[] {  "http://www.y100.com"});
-      params.add(new Object[] {  "http://www.radio1057.com"});
-    //params.add(new Object[] {  "http://m.933flz.com"});
-    // params.add(new Object[] {  "http://www.933flz.com"});
-   //  params.add(new Object[] {  "http://www.Z100.com"});
-    
-    // params.add(new Object[] {  "http://mike.iheartmedia.com"});
-     //params.add(new Object[] {  "http://m.mike.iheartmedia.com"});
-     
-    return params;
-}
-protected static DesiredCapabilities dCaps;
+	protected static DesiredCapabilities dCaps;
 
 	private final String url;
 	
 	WebDriver driver;
 	
-	Z100HomePage homePage;
-	 ArticlePage articlePage;
-	 Header header;	
+	CheckBrokenLink checkBroken ;
 		
-	//String browser = "firefox";
- //  String browser = "chrome";
 	
 	
-	
-	public CheckBadLinks(String url) {
+	public TestBrokenLinks(String url) {
 		this.url = url;
 	
 	}
@@ -87,9 +74,7 @@ protected static DesiredCapabilities dCaps;
 	@Before
 	public void setUp() throws Exception {
 
-		Page.setURL(url);
-		
-		
+		/*
 	   // System.setProperty("phantomjs.binary.path", "C:\\Users\\1111128\\workspace\\lib\\phantomjs-2.0.0-windows\\bin\\phantomjs.exe");
 		System.setProperty("phantomjs.binary.path", "/Users/1111128/git/lib/phantomjs-2.0.0-macosx/bin/phantomjs");
 		
@@ -103,12 +88,12 @@ protected static DesiredCapabilities dCaps;
 		driver.get(url + "/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		 Page.setDriver (driver);
-	     homePage = PageFactory.initElements(driver, Z100HomePage.class);
-	     articlePage = PageFactory.initElements(driver, ArticlePage.class);
-	     header = PageFactory.initElements(driver, Header.class);
-	        
-	      Page.getErrors().delete(0, Page.getErrors().length());
+		*/
+		 driver = Utils.launchBrowser(url, "firefox");
+	      	
+		 checkBroken = new CheckBrokenLink(driver);
+		 CheckBrokenLink.setURL(url);
+			
 	}
 	
 	
@@ -117,10 +102,11 @@ protected static DesiredCapabilities dCaps;
 	 {   
 	 	System.out.println("test method:" +  name.getMethodName() );
 	 	try{
-	 		homePage.goThroughLinks();
+	 		checkBroken.goThroughLinks();
 	 	}catch(Exception e)
 	 	{
-	 		handleException(e);
+	 		e.printStackTrace();
+	 		fail("Exception is thrown.");
 	 	}  	
 	 	System.out.println(name.getMethodName() + " is Done.");
 	 }
@@ -129,16 +115,21 @@ protected static DesiredCapabilities dCaps;
 	 @After
 	    public void tearDown() throws Exception{
 	    	driver.quit(); 
-	    	if (Page.getErrors().length() > 0)
-				 fail(Page.getErrors().toString());
 	    	
 	    }
 	
-	    private void handleException(Exception e)
-	    {   Page.getErrors().append("Exception is thrown.");
-	        e.printStackTrace();
-	    }
 	    
+	 
+	 private static int dayOfWeekToday()
+	 {
+		 Calendar c = Calendar.getInstance();
+		 c.setTime(new Date());
+		 int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+		 System.out.println("Today is:" + dayOfWeek);
+		 
+		 return dayOfWeek;
+	 }
 	   
-
+	
+	
 }

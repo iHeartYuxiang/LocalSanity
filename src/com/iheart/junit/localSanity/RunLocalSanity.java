@@ -19,7 +19,7 @@ public class RunLocalSanity {
 
 	 WebDriver driver;
 		
-	 Z100HomePage homePage;
+	 LocalPage homePage;
 	 ArticlePage articlePage;
 	 Header header;
 		
@@ -40,7 +40,7 @@ public class RunLocalSanity {
 	        Page.setDriver (driver);
 	        WaitUtility.sleep(2000);//Wait for page to load
 	        
-	        homePage = PageFactory.initElements(driver, Z100HomePage.class);
+	        homePage = PageFactory.initElements(driver, LocalPage.class);
 	        articlePage = PageFactory.initElements(driver, ArticlePage.class);
 	        header = PageFactory.initElements(driver, Header.class);
 	        

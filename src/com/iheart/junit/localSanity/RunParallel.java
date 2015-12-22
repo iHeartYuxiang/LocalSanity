@@ -129,7 +129,7 @@ protected static DesiredCapabilities dCaps;
        Page.getErrors().delete(0, Page.getErrors().length());
    }
 
-	
+	/*
 	 @Test
 	 public void test_AL_498_nowPlayingWidegt() throws Exception
 	 {   
@@ -244,7 +244,7 @@ protected static DesiredCapabilities dCaps;
 	 	System.out.println(name.getMethodName() + " is Done.");
 	 }
  
-	/*
+	*/
 	
 	@Test
 	 public void testBadLinks() throws Exception
@@ -258,7 +258,7 @@ protected static DesiredCapabilities dCaps;
 	 	}  	
 	 	System.out.println(name.getMethodName() + " is Done.");
 	 }
-    */
+    
   
 	 @After
 	    public void tearDown() throws Exception{

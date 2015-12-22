@@ -1,4 +1,4 @@
-package com.iheart.selenium.localSanity;
+package com.iheart.brokenLink;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
@@ -20,9 +20,18 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
+
+
 public class ExcelUtility {
 	
 	    private static final String FILE_PATH = "C:\\Users\\1111128\\workspace\\LocalSanity\\EXCEL";
+	    private static final String siteList_desktop = "C:\\Users\\1111128\\workspace\\LocalSanity\\desktop.txt";
+	    private static final String siteList_mobile = "C:\\Users\\1111128\\workspace\\LocalSanity\\mobile.txt";
+	    private static final String siteList_premier = "C:\\Users\\1111128\\workspace\\LocalSanity\\premier.txt";
 	    //We are making use of a single instance to prevent multiple write access to same file.
 	    private static final ExcelUtility INSTANCE = new ExcelUtility();
 
@@ -31,6 +40,20 @@ public class ExcelUtility {
 	    }
 
 	    private ExcelUtility() {
+	    }
+	    
+	    public static List<String> readSiteList(String file) 
+	    {   List<String> result = new ArrayList<String>();
+	        try{
+		    	for (String line : Files.readAllLines(Paths.get(file))) {
+		    	    System.out.println("See line:" + line);
+		    	    result.add(line);
+		    	}
+	        }catch(Exception e)
+	        {
+	        	e.printStackTrace();
+	        }
+	    	return result;
 	    }
 
 	    public static void writeToExcel( List<BadLink> brokenLinkList)
@@ -59,9 +82,9 @@ public class ExcelUtility {
 				
 				int rowCount = brokenLinkList.size();
 				if (rowCount < 1)
-					cellA1.setCellValue("Check:" + Page.getURL() + ": WOW WOW WOW! All good! Nothing is broken!");
+					cellA1.setCellValue("Check:" + CheckBrokenLink.getURL() + ": WOW WOW WOW! All good! Nothing is broken!");
 				else
-				{	cellA1.setCellValue("Check:" + Page.getURL());
+				{	cellA1.setCellValue("Check:" + CheckBrokenLink.getURL());
 				
 				
 				    // MAKE SOME TITLE
