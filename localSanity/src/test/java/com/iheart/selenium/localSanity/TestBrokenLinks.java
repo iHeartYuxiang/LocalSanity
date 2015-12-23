@@ -37,57 +37,21 @@ public class TestBrokenLinks {
 	public static Collection<Object[]> data() {
 
 		//What day is it today?
-		int day = dayOfWeekToday(); //Start from Sunday. 4: Wed, 3: Tuesday...
+		int day = dayOfWeekToday();
 		
-		//Choose sites for checking.  Divide the whole sites by 5, and run the corresponding part
-		
-		
-		List<String>  siteList_deskTop= ExcelUtility.readSiteList("siteList_desktop.txt");
-		List<String>  siteList_mobile= ExcelUtility.readSiteList("siteList_mobile.txt");
-		List<String>  siteList_premiere= ExcelUtility.readSiteList("siteList_premiere.txt");
-		
-		List<String> siteToCheckToday = new ArrayList<String>();
-		siteToCheckToday.addAll(getTodaysChunk(siteList_deskTop));
-		siteToCheckToday.addAll(getTodaysChunk(siteList_mobile));
-		siteToCheckToday.addAll(getTodaysChunk(siteList_premiere));
-		
+		List<String>  siteList= ExcelUtility.readSiteList("desktop.txt");
 		
 		
 		Collection<Object[]> params = new ArrayList<>(100);
 		int i = 0; 
-		for (String site:siteToCheckToday)
-			params.add(new Object[] {site });
+		for (String site:siteList)
+		params.add(new Object[] {site });
 		//params.add(new Object[] {  "http://www.z100.com"});
 	   
-	    System.out.println("Site count:" + params.size());
+	     
 	    return params;
 	}
 
-	
-	private static List<String> getTodaysChunk(List<String> siteList)
-	{  
-		//What day is it today?
-		int dayOfWeek = dayOfWeekToday(); //Start from Saturday:0: Sunday:1; Monday: 2. Tuesday:3; Wed: 4, ..
-				
-		if (dayOfWeek < 2) return null; //Do nothing during weekends
-		
-		int dailySize = siteList.size()/5 + 1;
-		
-		int startIndex = dailySize * (dayOfWeek -2);
-		int endIndex = startIndex + dailySize;
-	    //
-		List<String> siteToCheck = new ArrayList<String>();
-		for (int i = startIndex ; i < endIndex; i++)
-		{
-			siteToCheck.add(siteList.get(i));
-		}
-		
-		System.out.println("siteToCheck count:" + siteToCheck.size());
-		
-		return siteToCheck;
-		
-	}
-	
 	protected static DesiredCapabilities dCaps;
 
 	private final String url;

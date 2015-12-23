@@ -46,7 +46,7 @@ public class ExcelUtility {
 	    {   List<String> result = new ArrayList<String>();
 	        try{
 		    	for (String line : Files.readAllLines(Paths.get(file))) {
-		    	   // System.out.println("See line:" + line);
+		    	    System.out.println("See line:" + line);
 		    	    result.add(line);
 		    	}
 	        }catch(Exception e)
