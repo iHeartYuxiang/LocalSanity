@@ -1,4 +1,4 @@
-package com.iheart.brokenLink;
+package com.iheart.junit.localSanity;
 
 import static org.junit.Assert.fail;
 
@@ -28,6 +28,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import com.iheart.selenium.localSanity.Utils;
+import com.iheart.brokenLink.*;
 
 @RunWith(Parameterized.class)
 
