@@ -24,8 +24,8 @@ public class RunLocalSanity {
 	 Header header;
 		
 		
-	String browser = "firefox";
-	 //String browser = "chrome";
+	 String browser = "firefox";
+	// String browser = "chrome";
 	   
 		 
 		final String URL = "http://www.y100.com";
@@ -49,11 +49,11 @@ public class RunLocalSanity {
 
 		
 		 @Test
-		 public void test_AL_498_nowPlayingWidegt() throws Exception
+		 public void test_AL_855_nowPlayingWidegt() throws Exception
 		 {   
 		 	System.out.println("test method:" +  name.getMethodName() );
 		 	try{
-		 		header.AL_498_nowPlayingWidegt();
+		 		header.AL_855_nowPlayingWidegt();
 		 	}catch(Exception e)
 		 	{
 		 		handleException(e);
@@ -62,11 +62,11 @@ public class RunLocalSanity {
 		 }
 		 
 		 @Test
-		 public void test_AL_543_articleDetail() throws Exception
+		 public void test_AL_495_articleDetail() throws Exception
 		 {   
 		 	System.out.println("test method:" +  name.getMethodName() );
 		 	try{
-		 		articlePage.AL_543_articleDetail();
+		 		articlePage.AL_495_articleDetail();
 		 	}catch(Exception e)
 		 	{
 		 		handleException(e);
@@ -90,11 +90,11 @@ public class RunLocalSanity {
 		
 		 
 		 @Test
-		 public void test_AL_490_NowPlayingBar_DeskTop() throws Exception
+		 public void test_AL_2205_NowPlayingBar_DeskTop() throws Exception
 		 {   
 		 	System.out.println("test method:" +  name.getMethodName() );
 		 	try{
-		 		header.AL_490_NowPlayingBar_DeskTop();
+		 		header.AL_2205_NowPlayingBar_DeskTop();
 		 	}catch(Exception e)
 		 	{
 		 		handleException(e);
@@ -104,12 +104,12 @@ public class RunLocalSanity {
 		 
 		 
 		 @Test
-		 public void test_AL_491_NowPlayingBar_Mobile() throws Exception
+		 public void test_AL_857_NowPlayingBar_Mobile() throws Exception
 		 {   
 		 	System.out.println("test method:" +  name.getMethodName() );
 		 	try{
 		 		//METHOD IS NOT IMPLEMENTED IT
-		 		header.AL_491_NowPlayingBar_Mobile();
+		 		header.AL_857_NowPlayingBar_Mobile();
 		 	}catch(Exception e)
 		 	{
 		 		handleException(e);
@@ -121,26 +121,12 @@ public class RunLocalSanity {
 		 
 		 
 		 @Test
-		 public void test_AL_534_eyesToEars() throws Exception
+		// public void test_AL_534_eyesToEars() throws Exception
+		 public void test_AL_189_eyesToEars() throws Exception
 		 {   
 		 	System.out.println("test method:" +  name.getMethodName() );
 		 	try{
-		 		articlePage.AL_534_eyesToEars();
-		 	}catch(Exception e)
-		 	{
-		 		handleException(e);
-		 	}  	
-		 	System.out.println(name.getMethodName() + " is Done.");
-		 }
-	 
-		
-		 
-		 @Test
-		 public void test_AL_544_BlogDetails() throws Exception
-		 {   
-		 	System.out.println("test method:" +  name.getMethodName() );
-		 	try{
-		 		articlePage.AL_544_BlogDetails();
+		 		articlePage.AL_189_eyesToEars();
 		 	}catch(Exception e)
 		 	{
 		 		handleException(e);
@@ -149,12 +135,29 @@ public class RunLocalSanity {
 		 }
 	 
 		
+		 
 		 @Test
-		 public void test_AL_547_URLredirect() throws Exception
+		// public void test_AL_544_BlogDetails() throws Exception
+		 public void test_AL_501_BlogDetails() throws Exception
 		 {   
 		 	System.out.println("test method:" +  name.getMethodName() );
 		 	try{
-		 		articlePage.AL_547_URLredirect();
+		 		articlePage.AL_501_BlogDetails();
+		 	}catch(Exception e)
+		 	{
+		 		handleException(e);
+		 	}  	
+		 	System.out.println(name.getMethodName() + " is Done.");
+		 }
+	 
+		
+		 @Test
+		// public void test_AL_547_URLredirect() throws Exception
+		 public void test_AL_2049_URLredirect() throws Exception
+		 {   
+		 	System.out.println("test method:" +  name.getMethodName() );
+		 	try{
+		 		articlePage.AL_2049_URLredirect();
 		 	}catch(Exception e)
 		 	{
 		 		handleException(e);
@@ -165,7 +168,7 @@ public class RunLocalSanity {
 		 
 	    @After
 	    public void tearDown() throws Exception{
-	    //	driver.quit(); 
+	    	//driver.quit(); 
 	    	if (Page.getErrors().length() > 0)
 				 fail(Page.getErrors().toString());
 	    	

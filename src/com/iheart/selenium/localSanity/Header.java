@@ -5,6 +5,9 @@ import java.io.File;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.WebDriver;
@@ -35,32 +38,72 @@ public class Header extends Page{
 	@FindBy(id="ihrnp_artist") private WebElement ihrnp_artist;
 
 	
-	@FindBy(css="body > div.pageWrapper > div.nowPlayingWrapper.full > div > a > span.cta > span:nth-child(1)")
-	private WebElement listenLive;
+	//@FindBy(css="body > div.pageWrapper > div.nowPlayingWrapper.full > div > a > span.cta > span:nth-child(1)")
+	@FindBy(css=".listen-live > a:nth-child(1)")
+	  private WebElement listenLive;
 
-	public void AL_498_nowPlayingWidegt()
+	//public void AL_498_nowPlayingWidegt()
+	public void AL_855_nowPlayingWidegt()
 	{    
 		if (!isHeaderPlaying())
 		{
 			System.out.println("No song is playing. Do nothing.");
 			return;
 		}
-		//String title = trackTitleInWidget.getText();
-		String trackInWidget = driver.findElement(By.className("trackInfo")).findElement(By.tagName("a")).getText();
-		System.out.println("See trackInWidget:" + trackInWidget);
-		//parse the track and artist in the widget
 		
-		String artistInWidget = driver.findElement(By.className("trackInfo")).findElement(By.className("artistName")).getText();
+	/*
+	   String trackInfo = driver.findElement(By.cssSelector(".link-track > figure:nth-child(1) > figcaption:nth-child(2) > h4:nth-child(2)")).getText();
+		
+		System.out.println("See trackInfo:" + trackInfo);
+		*/
+		//parse the track and artist in the widget
+		String trackInWidget = parseTrackInfo().get("trackName");
+		
+		String artistInWidget =  parseTrackInfo().get("artist");
+				
+		//driver.findElement(By.className("trackInfo")).findElement(By.className("artistName")).getText();
 		
 		//Now go to any article, then do the check:
 		
 		articlePage = PageFactory.initElements(driver, ArticlePage.class);
 		articlePage.clickFirstArticle();
+		System.out.println("See track/artist in article page:" + articlePage.getPlayingTrack());
+		System.out.println("See track/artist in article page:" + articlePage.getPlayingArtist());
+		
 		if (!trackInWidget.equalsIgnoreCase(articlePage.getPlayingTrack()))
 			errors.append("Song track doesn't match between widget and ihrnp section.");
 		if (!artistInWidget.equalsIgnoreCase(articlePage.getPlayingArtist()))
 			errors.append("Artist  doesn't match between widget and ihrnp section.");
 	}
+	
+	private Map<String, String> parseTrackInfo()
+	{
+		 String trackInfo = driver.findElement(By.cssSelector(".link-track > figure:nth-child(1) > figcaption:nth-child(2) > h4:nth-child(2)")).getText();
+			
+		System.out.println("See trackInfo:" + trackInfo);
+		
+		return parseTrackInfo(trackInfo);
+		
+	}
+	
+	
+	//Return trackName and Artist
+	private Map<String, String> parseTrackInfo(String trackInfo)
+	{  
+		if (!trackInfo.contains(" by "))
+			return null;
+		Map<String, String> result = new HashMap<String,String>();
+		String track = trackInfo.split(" by ")[0].trim();
+		String artist = trackInfo.split(" by ")[1].trim();
+		result.put("trackName", track);
+		result.put("artist", artist);
+		
+		System.out.println("track/artist:"+ track + "/" + artist );
+		
+		return result;
+		
+	}
+	
 	
 	public void AL_485_listenLive()
 	{
@@ -80,7 +123,8 @@ public class Header extends Page{
 		
 	}
 	
-	public void AL_490_NowPlayingBar_DeskTop()
+	//public void AL_490_NowPlayingBar_DeskTop()
+	public void AL_2205_NowPlayingBar_DeskTop()
 	{     
 		if (!isHeaderPlaying())
 		{
@@ -88,11 +132,18 @@ public class Header extends Page{
 			return;
 		}
 		//Need to compare iheart page with local side by side
-		listenLive.click();
-		String trackInWidget = driver.findElement(By.className("trackInfo")).findElements(By.tagName("a")).get(0).getText();
-		String artistInWidget = driver.findElement(By.className("trackInfo")).findElements(By.tagName("a")).get(1).getText(); 
+		//listenLive.click();
+		//WaitUtility.sleep(1000);
+	    //String trackInWidget = driver.findElement(By.className("trackInfo")).findElements(By.tagName("a")).get(0).getText();
+		//String artistInWidget = driver.findElement(By.className("trackInfo")).findElements(By.tagName("a")).get(1).getText(); 
+		String trackInWidget = parseTrackInfo().get("trackName");
+		
+		String artistInWidget =  parseTrackInfo().get("artist");
+		
 		System.out.println("Now playing:" + trackInWidget + " BY " + artistInWidget);
 		
+		listenLive.click();
+		WaitUtility.sleep(1000);
 		
 		String windowPrevious = switchWindow();
 		//get song track from iheart.com
@@ -103,6 +154,8 @@ public class Header extends Page{
 		}catch(Exception e)
 		{
 			driver.navigate().refresh();
+			//Could it be that: Preroll is triggered, then soft gate.
+		    
 			trackPlayingInIheart = driver.findElement(By.className("station-now-playing")).getText();
 		}
 		System.out.println("Traking playing in iheart.com:" + trackPlayingInIheart);
@@ -115,7 +168,8 @@ public class Header extends Page{
 		
 	}
 	
-	public void AL_491_NowPlayingBar_Mobile()
+	//public void AL_491_NowPlayingBar_Mobile()
+	public void AL_857_NowPlayingBar_Mobile()
 	{   //
 		WaitUtility.sleep(2000);
 		if (!isHeaderPlaying())
@@ -142,7 +196,7 @@ public class Header extends Page{
 		WaitUtility.sleep(500);
 		//get song track from iheart.com
 		//String trackPlayingInIheart = driver.findElement(By.cssSelector("#hero > div.hero-content > div > div.profile-info > div > ul > li.station-description.type-secondary.type-small.tight > p")).getText();
-		String trackPlayingInIheart = driver.findElement(By.className("station-info")).findElements(By.tagName("a")).get(0).getAttribute("title");
+		String trackPlayingInIheart = driver.findElement(By.cssSelector(".station-description > div:nth-child(1) > p:nth-child(1) > div:nth-child(1) > a:nth-child(2)")).getText();
 			
 		System.out.println("Traking playing in iheart.com:" + trackPlayingInIheart);
 		
@@ -182,7 +236,7 @@ public class Header extends Page{
 				trackInWidget = driver.findElement(By.id("title")).getText();
 			else
 				//trackInWidget = driver.findElement(By.className("trackInfo")).findElements(By.tagName("a")).get(0).getText();
-				trackInWidget = driver.findElement(By.className("trackInfo")).getText();
+				trackInWidget = driver.findElement(By.cssSelector("body > div.page-wrapper > div.nowplaying-wrapper.full > section > section.playlist.left > div.header.current > a > figure > figcaption > h4")).getText();
 			  
 				System.out.println("IsPlaying:" + trackInWidget);
 		    if (trackInWidget.contains("#1 Hit Music Station") || trackInWidget.startsWith("Z100") || trackInWidget.startsWith("z100"))
