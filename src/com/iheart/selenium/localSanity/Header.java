@@ -150,6 +150,8 @@ public class Header extends Page{
 		//String trackPlayingInIheart = driver.findElement(By.cssSelector("#hero > div.hero-content > div > div.profile-info > div > ul > li.station-description.type-secondary.type-small.tight > p")).getText();
 		String trackPlayingInIheart = "";
 		try{
+			
+			//.station-description > div:nth-child(1) > p:nth-child(1) > div:nth-child(1) > a:nth-child(2)
 	    	trackPlayingInIheart = driver.findElement(By.className("station-now-playing")).getText();
 		}catch(Exception e)
 		{

@@ -15,7 +15,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class RunLocalSanity {
+public class RunSanityTest {
 
 	 WebDriver driver;
 		
@@ -168,7 +168,7 @@ public class RunLocalSanity {
 		 
 	    @After
 	    public void tearDown() throws Exception{
-	    	//driver.quit(); 
+	    	driver.quit(); 
 	    	if (Page.getErrors().length() > 0)
 				 fail(Page.getErrors().toString());
 	    	
