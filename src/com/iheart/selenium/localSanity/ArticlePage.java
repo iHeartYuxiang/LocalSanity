@@ -163,7 +163,7 @@ public class ArticlePage extends Page {
 	public void AL_2049_URLredirect()
 	{
 		clickOnPhotoGallery();
-		
+		WaitUtility.sleep(1000);
 		//driver.findElement(By.className("nowPlaying")).findElements(By.tagName("a")).get(0).click();
 		driver.findElement(By.cssSelector(".np-container")).click();		
 		
