@@ -32,7 +32,7 @@ import com.iheart.brokenLink.*;
 
 @RunWith(Parameterized.class)
 
-public class TestBrokenLinks {
+public class RunBrokenLinkCheck {
 
 	@Parameters
 	public static Collection<Object[]> data() {
