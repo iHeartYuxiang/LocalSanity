@@ -168,7 +168,7 @@ public class RunSanityTest {
 		 
 	    @After
 	    public void tearDown() throws Exception{
-	    	driver.quit(); 
+	        driver.quit(); 
 	    	if (Page.getErrors().length() > 0)
 				 fail(Page.getErrors().toString());
 	    	

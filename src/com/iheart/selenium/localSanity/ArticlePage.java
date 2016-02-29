@@ -92,10 +92,17 @@ public class ArticlePage extends Page {
 		
 		driver.findElement(By.cssSelector(".position1 > a:nth-child(1)")).click();
 		
-		
+		WaitUtility.sleep(1000);
 		String windowPrevious = switchWindow();
+		
 		//String stationName = driver.findElement(By.cssSelector("#hero > div.hero-content > div > div.profile-info > div > ul > li.station-name > span")).getText();
-		String stationName = driver.findElement(By.cssSelector(".profile-name > span:nth-child(1) > span:nth-child(1)")).getText();
+		String stationName = "";
+		try{
+			stationName = driver.findElement(By.cssSelector(".profile-name > span:nth-child(1) > span:nth-child(1)")).getText();
+		}catch(Exception e)
+		{   WaitUtility.sleep(1000);
+			stationName = driver.findElement(By.cssSelector(".profile-name > span:nth-child(1) > span:nth-child(1)")).getText();
+		}
 		System.out.println("stationName:"  + stationName);
 		if (!e2eStationName.equalsIgnoreCase(stationName))
 			errors.append("Wrong radio station is launched from eye to ear.");
@@ -161,11 +168,16 @@ public class ArticlePage extends Page {
 	
 	//public void AL_547_URLredirect()
 	public void AL_2049_URLredirect()
-	{
+	{   
 		clickOnPhotoGallery();
-		WaitUtility.sleep(1000);
+		WaitUtility.sleep(2000);
 		//driver.findElement(By.className("nowPlaying")).findElements(By.tagName("a")).get(0).click();
-		driver.findElement(By.cssSelector(".np-container")).click();		
+		try{
+		  driver.findElement(By.cssSelector(".np-container")).click();		
+		}catch(Exception e)
+		{    //try again
+			 driver.findElement(By.cssSelector(".np-container")).click();	
+		}
 		
         String winHandleBefore = switchWindow();
 		

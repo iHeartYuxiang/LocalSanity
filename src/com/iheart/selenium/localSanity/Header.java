@@ -191,11 +191,12 @@ public class Header extends Page{
 		System.out.println("Now playing in mobile:" + trackInWidget + " by " + artistInWidget);
 		
 		driver.findElement(By.className("localHeader")).findElements(By.tagName("a")).get(0).click();
+		WaitUtility.sleep(500);
 		driver.findElement(By.className("listen-live")).findElement(By.tagName("a")).click();
 		
 	
 		String windowPrevious = switchWindow();
-		WaitUtility.sleep(500);
+		WaitUtility.sleep(2000);
 		//get song track from iheart.com
 		//String trackPlayingInIheart = driver.findElement(By.cssSelector("#hero > div.hero-content > div > div.profile-info > div > ul > li.station-description.type-secondary.type-small.tight > p")).getText();
 		String trackPlayingInIheart = driver.findElement(By.cssSelector(".station-description > div:nth-child(1) > p:nth-child(1) > div:nth-child(1) > a:nth-child(2)")).getText();
