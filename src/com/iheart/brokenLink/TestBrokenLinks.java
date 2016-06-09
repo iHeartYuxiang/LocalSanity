@@ -125,7 +125,7 @@ public class TestBrokenLinks {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		*/
-		 driver = Utils.launchBrowser(url, "firefox");
+		 driver = Utils.launchBrowser(url, "chrome");
 	      	
 		 checkBroken = new CheckBrokenLink(driver);
 		 CheckBrokenLink.setURL(url);

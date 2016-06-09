@@ -1,10 +1,29 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>LocalSanity</groupId>
-  <artifactId>LocalSanity</artifactId>
+
+  <groupId>com.iheart.selenium</groupId>
+  <artifactId>royaltyReporting</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <build>
-    <sourceDirectory>src</sourceDirectory>
+  <packaging>jar</packaging>
+
+  <name>royaltyReporting</name>
+  <url>http://maven.apache.org</url>
+
+  
+ 
+  <properties>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <failsafe.version>2.17</failsafe.version>
+    <junit.version>4.12-beta-1</junit.version>
+    <ghostdriver.version>1.1.0</ghostdriver.version>
+    <phantomjs.version>1.9.7</phantomjs.version>
+    <phantomjs.plugin.version>0.4</phantomjs.plugin.version>
+</properties>
+
+<build>
+
+     <sourceDirectory>src</sourceDirectory>
     <resources>
       <resource>
         <directory>src</directory>
@@ -46,35 +65,41 @@
 		</plugin> 
 		 
         </plugins>
+        
+        
   </build>
-  
-  
+
 <dependencies>
 
+<dependency>
+   <groupId>io.github.bonigarcia</groupId>
+   <artifactId>webdrivermanager</artifactId>
+   <version>1.4.3</version>
+</dependency>
 
 <dependency>
 <groupId>org.seleniumhq.selenium</groupId>
 <artifactId>selenium-server</artifactId>
-<version>2.47.0</version>
+<version>2.53.0</version>
 </dependency>
 
 <dependency>
 <groupId>org.seleniumhq.selenium</groupId>
 <artifactId>selenium-java</artifactId>
-<version>2.47.0</version>
+<version>2.53.0</version>
 </dependency>
 
 
 <dependency>
 <groupId>org.seleniumhq.selenium</groupId>
 <artifactId>selenium-api</artifactId>
-<version>2.47.0</version>
+<version>2.53.0</version>
 </dependency>
 
 <dependency>
 	<groupId>org.seleniumhq.selenium</groupId>
 	<artifactId>selenium-remote-driver</artifactId>
-	<version>2.47.1</version>
+	<version>2.53.0</version>
 </dependency>
 
 <dependency>
@@ -136,7 +161,18 @@
         <scope>test</scope>
     </dependency>  
 
-   
+<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+</dependency>
+
+
+<dependency>
+	<groupId>io.appium</groupId>
+	<artifactId>java-client</artifactId>
+	<version>2.1.0</version>
+</dependency>   
 </dependencies>
   
   <reporting>
@@ -148,7 +184,6 @@
         </plugin>
     </plugins>
 </reporting>
-  
   
   
 </project>
